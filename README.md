@@ -4,6 +4,8 @@ Runs a simple molecular dynamics simulation on a complex of the workspace.
 
 Needs a valid installation of OpenMM
 
+![](molecular_dynamics.gif)
+
 ### Installation
 
 ```sh
