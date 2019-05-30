@@ -150,7 +150,10 @@ class MDSimulation(nanome.PluginInstance):
             return
         self.request_complex_list(self.on_complex_list_received)
 
-if __name__ == "__main__":
+def main():
     plugin = nanome.Plugin("MD Simulation", "Run molecular dynamics on the selected complexes, using OpenMM", "MD", True)
     plugin.set_plugin_class(MDSimulation)
     plugin.run('127.0.0.1', 8888)
+
+if __name__ == "__main__":
+    main()

@@ -1,2 +1,5 @@
 .vs/
 __pycache__
+build/
+dist/
+nanome_molecular_dynamics.egg-info/
