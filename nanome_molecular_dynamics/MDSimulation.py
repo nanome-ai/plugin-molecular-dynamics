@@ -6,8 +6,8 @@ import traceback
 
 from timeit import default_timer as timer
 
-from MDSimulationMenu import MDSimulationMenu
-from MDSimulationProcess import MDSimulationProcess
+from .MDSimulationMenu import MDSimulationMenu
+from .MDSimulationProcess import MDSimulationProcess
 
 class MDSimulation(nanome.PluginInstance):
     def __init__(self):

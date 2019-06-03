@@ -51,7 +51,7 @@ class MDSimulationMenu():
             self.__plugin.toggle_simulation()
 
         # Request and set menu window
-        menu = nanome.ui.Menu.get_plugin_menu()
+        menu = self.__plugin.menu
         menu.title = "MD Simulation"
         menu._width = 1.0
         menu._height = 1.0
