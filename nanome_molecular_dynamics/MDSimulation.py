@@ -105,7 +105,7 @@ class MDSimulation(nanome.PluginInstance):
         self.__complex_list = complex_list
         indices = []
         for complex in complex_list:
-            for atom in complex.get_atom_iterator():
+            for atom in complex.atoms:
                 indices.append(atom.index)
         end = timer()
         Logs.debug("Second Request:", end - self.__start)

@@ -89,7 +89,8 @@ class MDSimulationProcess():
 
             fixed_complex = nanome.structure.Complex.io.from_pdb(path="tmp2.pdb")
             fixed_complex.index = complex.index
-            fixed_complex.transform = complex.transform
+            fixed_complex.position = complex.position
+            fixed_complex.rotation = complex.rotation
             fixed_complex.molecular.name = complex.molecular.name
             fixed_complex.rendering.visible = True
             fixed_complexes.append(fixed_complex)
