@@ -6,7 +6,7 @@ README = (pathlib.Path(__file__).parent / "README.md").read_text()
 setup(
 	name = 'nanome-molecular-dynamics',
 	packages=find_packages(),
-	version = '0.0.2',
+	version = '0.0.3',
 	license='MIT',
 	description = 'Nanome Plugin to run molecular dynamics simulation on a complex',
 	long_description = README,
