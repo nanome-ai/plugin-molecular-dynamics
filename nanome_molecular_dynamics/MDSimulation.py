@@ -75,12 +75,13 @@ class MDSimulation(nanome.PluginInstance):
             self.__run_simulation(False, complex_list)
 
     def on_complexes_received(self, complex_list):
-        complex_list = self.__simulation.fix_complexes(complex_list)
         self.add_bonds(complex_list, self.bonds_added)
 
     def bonds_added(self, complex_list):
+        complex_list = self.__simulation.fix_complexes(complex_list)
         self.__complex_list = complex_list
-        
+
+        # if settings.duplicateSystem:
         # for complex in complex_list:
         #     for molecule in complex.molecules:
         #         molecule.index = -1

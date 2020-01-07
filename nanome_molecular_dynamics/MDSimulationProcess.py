@@ -39,7 +39,7 @@ class MDSimulationProcess():
         if kind == _Bond.Kind.CovalentTriple:
             return Triple
         return None
-        
+
     @staticmethod
     def get_atom_symbol(name, atoms_nb):
         upper = name.upper()
@@ -65,6 +65,21 @@ class MDSimulationProcess():
     def set_stream(self, stream):
         self.__stream = stream
 
+    def delete_alternate_atoms(self, topology, positions):
+        modeller = Modeller(topology, positions)
+        delete_atoms = []
+        for chain in topology.chains():
+            for indexInChain, residue in enumerate(chain.residues()):
+                atom_names = []
+                for atom in residue.atoms():
+                    if atom.name in atom_names:
+                        delete_atoms.append(atom)
+                    else:
+                        atom_names.append(atom.name)
+
+        modeller.delete(delete_atoms)
+        return (modeller.getTopology(), modeller.getPositions())
+
     def fix_complexes(self, complex_list):
         fixed_complexes = []
         for complex in complex_list:
@@ -84,8 +99,10 @@ class MDSimulationProcess():
             fixer.addMissingAtoms()
             fixer.removeHeterogens(False)
             fixer.addMissingHydrogens(7.0)
+
+            (topology, positions) = self.delete_alternate_atoms(fixer.topology, fixer.positions)
             with open('tmp2.pdb', 'w') as pdb_file:
-                PDBFile.writeFile(fixer.topology, fixer.positions, pdb_file)
+                PDBFile.writeFile(topology, positions, pdb_file)
 
             fixed_complex = nanome.structure.Complex.io.from_pdb(path="tmp2.pdb")
             fixed_complex.index = complex.index
@@ -140,7 +157,6 @@ class MDSimulationProcess():
                             if max_z == None or position.z > max_z:
                                 max_z = position.z
 
-        Logs.debug("Add bonds")
         topology.createStandardBonds()
         topology.createDisulfideBonds(positions)
         added_bonds = set(topology.bonds())
@@ -160,60 +176,45 @@ class MDSimulationProcess():
         # topology.setPeriodicBoxVectors(computePeriodicBoxVectors(max_x - min_x, max_y - min_y, max_z - min_z, 90, 90, 90))
         topology.setPeriodicBoxVectors(computePeriodicBoxVectors(49.163, 45.981, 38.869, 90.00, 90.00, 90.00))
 
-        # connectBonds = []
-        # for complex in complex_list:
-        #     for molecule in complex.molecules:
-        #         for chain in molecule.chains:
-        #             for residue in chain.residues:
-        #                 for bond in residue.bonds:
-        #                     (atom1, residue1) = added_atoms[bond.atom1.index]
-        #                     (atom2, residue2) = added_atoms[bond.atom2.index]
-        #                     atom1elem = bond.atom1.molecular.symbol
-        #                     atom2elem = bond.atom2.molecular.symbol
-        #                     if atom1elem not in metalElements and atom2elem not in metalElements:
-        #                         connectBonds.append((atom1, atom2))
-        #                     elif atom1elem in metalElements and residue2.molecular.name not in PDBFile._standardResidues:
-        #                         connectBonds.append((atom1, atom2))
-        #                     elif atom2elem in metalElements and residue1.molecular.name not in PDBFile._standardResidues:
-        #                         connectBonds.append((atom1, atom2))
-        # if len(connectBonds) > 0:
-        #     existingBonds = set(topology.bonds())
-        #     for bond in connectBonds:
-        #         if bond not in existingBonds and (bond[1], bond[0]) not in existingBonds:
-        #             topology.addBond(bond[0], bond[1])
-        #             existingBonds.add(bond)
-
-        # Debug, to remove
-        # pdb = PDBFile('C:/Users/Ramji/Desktop/input.pdb')
-        # f = open("mine.txt", "w")
-        # for chain in topology.chains():
-        #     f.write("----Chain " + str(chain.index) + "\n")
-        #     for residue in chain.residues():
-        #         f.write("--------Residue " + residue.name + " " + str(residue.index) + "\n")
-        #         for atom in residue.atoms():
-        #             f.write("------------Atom " + atom.name + " " + atom.element.name + " " + str(atom.index) + "\n")
-        #         for bond in residue.internal_bonds():
-        #             f.write("------------internal_bond " + str(bond[0].index) + " " + str(bond[1].index) + " " + str(bond.type) + " " + str(bond.order) + "\n")
-        #         for bond in residue.external_bonds():
-        #             f.write("------------external_bonds " + str(bond[0].index) + " " + str(bond[1].index) + " " + str(bond.type) + " " + str(bond.order) + "\n")
-        # f.close()
-        # f = open("theirs.txt", "w")
-        # for chain in pdb.topology.chains():
-        #     f.write("----Chain " + str(chain.index) + "\n")
-        #     for residue in chain.residues():
-        #         f.write("--------Residue " + residue.name + " " + str(residue.index) + "\n")
-        #         for atom in residue.atoms():
-        #             f.write("------------Atom " + atom.name + " " + atom.element.name + " " + str(atom.index) + "\n")
-        #         for bond in residue.internal_bonds():
-        #             f.write("------------internal_bond " + str(bond[0].index) + " " + str(bond[1].index) + " " + str(bond.type) + " " + str(bond.order) + "\n")
-        #         for bond in residue.external_bonds():
-        #             f.write("------------external_bonds " + str(bond[0].index) + " " + str(bond[1].index) + " " + str(bond.type) + " " + str(bond.order) + "\n")
-        # f.close()
-
         # Create simulation parameters
         # nonbondedMethod = PME
+        [templates, residues] = self.__forcefield.generateTemplatesForUnmatchedResidues(topology)
+        for index, residue in enumerate(residues):
+            template = templates[index]
+            print("unmatched residue:", residue)
+        for index, template in enumerate(templates):
+            residue = residues[index]
+            residue_bonds = list(residue.internal_bonds())+list(residue.external_bonds())
+            print("residue bonds:", residue_bonds)
+            (unique_res_bonds, unique_tmp_bonds) = ForceField.findMissingBonds(residue, template)
+            print("UNIQUE RESIDUE BONDS:", unique_res_bonds)
+            print("UNIQUE TEMPLATE BONDS:", unique_tmp_bonds)
+            print(f"RESIDUE {residue.name}:")
+            if len(unique_res_bonds) > 0:
+                print("Missing bonds:")
+                for res_bond in unique_res_bonds:
+                    print(f"\n{res_bond}")
+            print(f"TEMPLATE {template.name}:")
+            if len(unique_tmp_bonds) > 0:
+                print("Missing bonds:")
+                for tmp_bond in unique_tmp_bonds:
+                    print(f"\n{tmp_bond}")
+            print("-------------------------")
+            for bond in unique_res_bonds:
+                template.name += '[' + ForceField.getAtomID(bond[0]) + '<-->' + ForceField.getAtomID(bond[1]) + ']'
+                if bond[0] in residue.atoms() and bond[1] in residue.atoms():
+                    template.addBondByName(bond[0].name, bond[1].name)
+                else:
+                    template.addExternalBondByName(bond[0].name)
+
+            if template.name not in self.__forcefield._templates:
+                self.__forcefield.registerResidueTemplate(template)
+                print(f"registering template {template.name}")
+            else:
+                print(f"redundant template {template.name} ********************")
+
         system = self.__forcefield.createSystem(topology, nonbondedMethod = NoCutoff, nonbondedCutoff = 1 * nanometer, constraints = HBonds)
-        
+
         # Set the simulation
         integrator = LangevinIntegrator(300 * kelvin, 1 / picosecond, 0.002 * picosecond)
         simulation = Simulation(topology, system, integrator)
@@ -259,7 +260,7 @@ class MDSimulationProcess():
             if math.isnan(z):
                 Logs.warning("Got a NaN value, ignoring it")
                 continue
-            
+
             new_positions[i * 3] = x
             new_positions[i * 3 + 1] = y
             new_positions[i * 3 + 2] = z
