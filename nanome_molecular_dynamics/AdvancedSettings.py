@@ -193,8 +193,8 @@ class AdvancedSettings:
     }
 
     # simulation options
-    simulation_reporters_values = {'StateData': bool, 'DCD': bool, 'PDB': bool}
     simulation_reporter_interval_values = int
+    simulation_reporter_options_values = {'Positions': bool, 'Velocities': bool, 'Forces': bool, 'Energies': bool}
     simulation_equilibrium_steps_values = int
     simulation_production_steps_values = int
     simulation_minimize_values = [True, False]
@@ -205,27 +205,20 @@ class AdvancedSettings:
     simulation_statedata_options_values = [None, simulation_statedata_options]
 
     simulation_options = {
-        'Reporters': {
-            'value': 'simulation_reporters_values',
-            'depends': None,
-            'default': {'StateData': True, 'DCD': True, 'PDB': False},
-            'unit': unit.picosecond,
-            'type': dict
-        },
         'Report Interval': {
             'value': 'simulation_reporter_interval_values',
             'depends': None,
-            'default': 1000,
+            'default': 200,
             'type': int
+        },
+        'Reporter options': {
+            'value': 'simulation_reporter_options_values',
+            'depends': None,
+            'default': {'Positions': True, 'Velocities': False, 'Forces': False, 'Energies': False},
+            'type': dict
         },
         'Equilibration steps': {
             'value': 'simulation_equilibrium_steps_values',
-            'depends': None,
-            'default': 100,
-            'type': int
-        },
-        'Production steps': {
-            'value': 'simulation_production_steps_values',
             'depends': None,
             'default': 1000,
             'type': int
@@ -253,21 +246,14 @@ class AdvancedSettings:
             'depends': 'simulation_random_init_vel',
             'default': 300,
             'type': float
-        },
-        'StateData options': {
-            'vnames': ['step' , 'time', 'speed', 'progress', 'remainingTime', 'totalSteps', 'potentialEnergy', 'kineticEnergy', 'totalEnergy', 'temperature', 'volume', 'density'],
-            'value': 'simulation_statedata_options_values',
-            'depends': 'simulation_reporters.StateData',
-            'default': {'Step index': True, 'Time': False, 'Speed': True, 'Progress': True, 'Remaining time': True, 'Total steps': True, 'Potential energy': True, 'Kinetic energy': False, 'Total energy': False, 'Temperature': True, 'Volume': False, 'Density': False},
-            'type': dict
         }
     }
 
     Options = {'General' : general_options, 'System': system_options, 'Integrator' : integrator_options, 'Simulation': simulation_options}
-    Instance = None
+    instance = None
 
     def __init__(self):
-        AdvancedSettings.Instance = self
+        AdvancedSettings.instance = self
 
         # general settings
         self.general_pdb_name = 'tmp.pdb'
@@ -296,10 +282,11 @@ class AdvancedSettings:
         self.system = None
         # integrator settings
         self.integrator_integrator = None
+        self.integrator_collision_rate = None
         self.integrator = None
         # simulation settings
-        self.simulation_reporters = None
         self.simulation_reporter_interval = None
+        self.simulation_reporter_options = None
         self.simulation_equilibrium_steps = None
         self.simulation_production_steps = None
         self.simulation_minimize = None
@@ -521,7 +508,7 @@ class AdvancedSettings:
             self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
             self.simulation.context.setPositions(self.positions)
         return self.simulation
-    # TODO
-    def get_reporters(self, reporter_type, reporter_params):
-        reporter = getattr(app, reporter_type, None)(**reporter_params)
-        self.get_simulation().reporters.append(reporter)
+
+    def attach_reporter(self, reporter_class, result_callback):
+        reporter = reporter_class(self, result_callback)
+        self.get_simulation().reporters = [reporter]

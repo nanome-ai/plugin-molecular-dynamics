@@ -99,7 +99,6 @@ class MDAdvancedSettingsMenu:
         self.__plugin.update_content(content)
 
     def draw_option(self, category_name, ln, option, display_name, display_type, display_value, disabled, parent=None):
-        # print(display_name, display_type, display_value)
         ln.layout_orientation = nanome.util.enums.LayoutTypes.horizontal
         ln.disabled = disabled
 
@@ -143,9 +142,6 @@ class MDAdvancedSettingsMenu:
                     child_display_type  = type(child_display_value)
                     self.draw_option(category_name, ln_option, option, suboption_name, child_display_type, child_display_value, disabled, choice_cell)
         else:
-            if display_name == 'Collision rate':
-                print('Collision rate:')
-                print('display value:', display_value)
             if display_type in [int, float]:
                 content = choice_cell.add_new_text_input()
                 content.register_changed_callback(partial(self.fix_input, choice_cell))

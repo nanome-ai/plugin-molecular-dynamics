@@ -19,7 +19,6 @@ from .AdvancedSettings import AdvancedSettings
 
 nanometer = nano * meter
 picosecond = pico * second
-nb_steps = 1000
 metalElements = ['Al','As','Ba','Ca','Cd','Ce','Co','Cs','Cu','Dy','Fe','Gd','Hg','Ho','In','Ir','K','Li','Mg',
         'Mn','Mo','Na','Ni','Pb','Pd','Pt','Rb','Rh','Sm','Sr','Te','Tl','V','W','Yb','Zn']
 
@@ -30,7 +29,6 @@ class MDSimulationProcess():
     def __init__(self, plugin):
         self.__plugin = plugin
         self.__forcefield = None
-        self.__reporter = MDReporter(self)
 
     @staticmethod
     def get_bond_type(kind):
@@ -117,7 +115,8 @@ class MDSimulationProcess():
         return fixed_complexes
 
     def init_simulation(self, complex_list):
-        self.__forcefield = AdvancedSettings.Instance.get_forcefield()
+        self.nb_steps = AdvancedSettings.instance.simulation_reporter_interval
+        self.__forcefield = AdvancedSettings.instance.get_forcefield()
         # Create topology
         topology = Topology()
         added_atoms = dict()
@@ -217,73 +216,70 @@ class MDSimulationProcess():
                 print(f"redundant template {template.name} ********************")
 
         # system = self.__forcefield.createSystem(topology, nonbondedMethod = NoCutoff, nonbondedCutoff = 1 * nanometer, constraints = HBonds)
-        system = AdvancedSettings.Instance.get_system(topology)
+        system = AdvancedSettings.instance.get_system(topology)
 
         # Set the simulation
         # integrator = LangevinIntegrator(300 * kelvin, 1 / picosecond, 0.002 * picosecond)
-        integrator = AdvancedSettings.Instance.get_integrator()
+        integrator = AdvancedSettings.instance.get_integrator()
+
+        if AdvancedSettings.instance.system_thermostat is not 'None':
+            temp = AdvancedSettings.instance.system_generation_temp
+            col_rate = AdvancedSettings.instance.integrator_collision_rate
+            system.addForce(mm.AndersenThermostat(temp*kelvin, col_rate/picoseconds))
+
         # simulation = Simulation(topology, system, integrator)
-        simulation = AdvancedSettings.Instance.get_simulation(positions)
-
+        self.__simulation = AdvancedSettings.instance.get_simulation(positions)
         # Set reporting
-        simulation.reporters.append(self.__reporter)
-        simulation.context.setPositions(positions)
-        if AdvancedSettings.Instance.get_option_by_name(AdvancedSettings.Options['Simulation'], 'Minimize?'):
-            simulation.minimizeEnergy()
+        AdvancedSettings.instance.attach_reporter(MDReporter, self.simulation_result)
 
-        self.__simulation = simulation
+        self.__simulation.context.setPositions(positions)
+        if AdvancedSettings.instance.simulation_minimize:
+            self.__simulation.minimizeEnergy()
 
-        self.__positions = [0.0] * ((len(positions) * 3) + 5000000)
+        if AdvancedSettings.instance.simulation_random_init_vel:
+            self.__simulation.context.setVelocitiesToTemperature(300*kelvin)
+            eq_steps = AdvancedSettings.instance.simulation_equilibrium_steps
+            if eq_steps:
+                self.__plugin.send_notification(nanome.util.enums.NotificationTypes.message, "Equilibrating...")
+                self.simulate(complex_list, eq_steps)
 
-    def simulate(self, complex_list):
-        # positions = []
-        # for complex in complex_list:
-        #     for molecule in complex.molecules:
-        #         for chain in molecule.chains:
-        #             for residue in chain.residues:
-        #                 for atom in residue.atoms:
-        #                     position = atom.molecular.position
-        #                     positions.append(Vec3(position.x * 0.1, position.y * 0.1, position.z * 0.1))
-
-        # self.__simulation.context.setPositions(positions)
-
+    def simulate(self, complex_list, steps=None):
         self.__start = timer()
-        self.__simulation.step(nb_steps)
+        self.__plugin.send_notification(nanome.util.enums.NotificationTypes.message, "Simulating...")
+        self.__simulation.step(steps or AdvancedSettings.instance.simulation_reporter_interval)
 
-    def simulation_result(self, positions):
+    def simulation_result(self, positions, velocities=None, forces=None, energies=None):
         end = timer()
         Logs.debug("Simulation:", end - self.__start)
         self.__start = timer()
-        new_positions = self.__positions
-        for i in range(len(positions)):
-            position = positions[i]
-            x = position[0]._value * 10
-            if math.isnan(x):
+        new_positions = []
+        for position in positions:
+            coords = [c._value * 10 for c in position]
+            if any(math.isnan(c) for c in coords):
                 Logs.warning("Got a NaN value, ignoring it")
                 continue
-            y = position[1]._value * 10
-            if math.isnan(y):
-                Logs.warning("Got a NaN value, ignoring it")
-                continue
-            z = position[2]._value * 10
-            if math.isnan(z):
-                Logs.warning("Got a NaN value, ignoring it")
-                continue
+            new_positions.extend(coords)
+        self.__stream.update(new_positions, self.on_result_processed)
 
-            new_positions[i * 3] = x
-            new_positions[i * 3 + 1] = y
-            new_positions[i * 3 + 2] = z
-        self.__stream.update(new_positions, self.__plugin.on_simulation_done)
-        end = timer()
-        Logs.debug("Sent new complexes:", end - self.__start)
+    def on_result_processed(self):
+        if self.__plugin.running:
+            self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
 
 # This class is a reporter for OpenMM Simulation class
 class MDReporter(object):
-    def __init__(self, process):
-        self.__process = process
+    def __init__(self, settings, results_callback):
+        self.__apply_results = results_callback
+        self.__settings = settings
+        self.__interval = self.__settings.simulation_reporter_interval
+        self.__options = list(self.__settings.simulation_reporter_options.values())
 
     def describeNextReport(self, simulation):
-        return (nb_steps, True, False, False, False, None)
+
+        return (self.__interval, *self.__options , None)
 
     def report(self, simulation, state):
-        self.__process.simulation_result(state.getPositions())
+        use_velocities = self.__options[1]
+        use_forces = self.__options[2]
+        use_energies = self.__options[3]
+
+        self.__apply_results(state.getPositions(), state.getVelocities() if use_velocities else None, state.getForces() if use_forces else None, state.getEnergies if use_energies else None)
