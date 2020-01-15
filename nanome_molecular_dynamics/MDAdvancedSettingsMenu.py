@@ -129,7 +129,7 @@ class MDAdvancedSettingsMenu:
                 for option_value in display_value:
                     ln_option = nanome.ui.LayoutNode()
                     choices_list.items.append(ln_option)
-                    child_display_value = str(option_value)
+                    child_display_value = option_value
                     child_display_type  = type(option_value)
                     self.draw_option(category_name, ln_option, option, '', child_display_type, child_display_value, disabled, choice_cell)
             elif display_type is dict:
@@ -160,8 +160,9 @@ class MDAdvancedSettingsMenu:
                 # select current options
                 if choice_cell.option['type'] is dict:
                     content.selected = display_value
-                elif choice_cell.parent_cell:
+                else:
                     content.selected = self.__settings.get_setting(option) == display_value
+
                 content.unusable = disabled
 
     def fix_input(self, choice_cell, inp):

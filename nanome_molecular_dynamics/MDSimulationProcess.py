@@ -115,8 +115,8 @@ class MDSimulationProcess():
         return fixed_complexes
 
     def init_simulation(self, complex_list):
-        self.nb_steps = AdvancedSettings.instance.simulation_reporter_interval
-        self.__forcefield = AdvancedSettings.instance.get_forcefield()
+        settings = AdvancedSettings.instance
+        self.__forcefield = settings.get_forcefield()
         # Create topology
         topology = Topology()
         added_atoms = dict()
@@ -216,36 +216,35 @@ class MDSimulationProcess():
                 print(f"redundant template {template.name} ********************")
 
         # system = self.__forcefield.createSystem(topology, nonbondedMethod = NoCutoff, nonbondedCutoff = 1 * nanometer, constraints = HBonds)
-        system = AdvancedSettings.instance.get_system(topology)
+        system = settings.get_system(topology)
 
         # Set the simulation
         # integrator = LangevinIntegrator(300 * kelvin, 1 / picosecond, 0.002 * picosecond)
-        integrator = AdvancedSettings.instance.get_integrator()
+        integrator = settings.get_integrator()
 
-        if AdvancedSettings.instance.system_thermostat is not 'None':
-            temp = AdvancedSettings.instance.system_generation_temp
-            col_rate = AdvancedSettings.instance.integrator_collision_rate
+        if settings.system_thermostat is not 'None':
+            temp = settings.system_generation_temp
+            col_rate = settings.integrator_collision_rate
             system.addForce(mm.AndersenThermostat(temp*kelvin, col_rate/picoseconds))
 
         # simulation = Simulation(topology, system, integrator)
-        self.__simulation = AdvancedSettings.instance.get_simulation(positions)
+        self.__simulation = settings.get_simulation(positions)
         # Set reporting
-        AdvancedSettings.instance.attach_reporter(MDReporter, self.simulation_result)
+        settings.attach_reporter(MDReporter, self.simulation_result)
 
         self.__simulation.context.setPositions(positions)
-        if AdvancedSettings.instance.simulation_minimize:
+        if settings.simulation_minimize:
             self.__simulation.minimizeEnergy()
 
-        if AdvancedSettings.instance.simulation_random_init_vel:
-            self.__simulation.context.setVelocitiesToTemperature(300*kelvin)
-            eq_steps = AdvancedSettings.instance.simulation_equilibrium_steps
+        if settings.simulation_random_init_vel:
+            self.__simulation.context.setVelocitiesToTemperature(settings.system_generation_temp*kelvin)
+            eq_steps = settings.simulation_equilibrium_steps
             if eq_steps:
                 self.__plugin.send_notification(nanome.util.enums.NotificationTypes.message, "Equilibrating...")
                 self.simulate(complex_list, eq_steps)
 
     def simulate(self, complex_list, steps=None):
         self.__start = timer()
-        self.__plugin.send_notification(nanome.util.enums.NotificationTypes.message, "Simulating...")
         self.__simulation.step(steps or AdvancedSettings.instance.simulation_reporter_interval)
 
     def simulation_result(self, positions, velocities=None, forces=None, energies=None):
@@ -263,7 +262,7 @@ class MDSimulationProcess():
 
     def on_result_processed(self):
         if self.__plugin.running:
-            self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+            self.__simulation.step(settings.simulation_reporter_interval)
 
 # This class is a reporter for OpenMM Simulation class
 class MDReporter(object):

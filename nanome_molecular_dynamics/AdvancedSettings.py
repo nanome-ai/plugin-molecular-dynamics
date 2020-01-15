@@ -77,6 +77,8 @@ class AdvancedSettings:
     system_barostat_interval_values = [None, int]
     system_thermostats = ['None', 'Andersen']
     system_thermostat_values = [None, system_thermostats, None, None, system_thermostats]
+    system_random_init_vel_values = [True, False]
+    system_generation_temp_values = [float, None]
 
     system_options = {
         'Nonbonded method' : {
@@ -93,7 +95,7 @@ class AdvancedSettings:
             'default': 0.0005,
             'type': float
         },
-        'Contraints': {
+        'Constraints': {
             'name': 'system_contraint_names',
             'value': 'system_constraint_values',
             'depends': None,
@@ -119,6 +121,18 @@ class AdvancedSettings:
             'depends': 'system_nonbonded_method',
             'default': 1.0,
             'unit': unit.nanometers,
+            'type': float
+        },
+        'Random init vels.': { #TODO: Get dependency working
+            'value': 'system_random_init_vel_values',
+            'depends': None,
+            'default': True,
+            'type': bool
+        },
+        'Generation temp.': {
+            'value': 'system_generation_temp_values',
+            'depends': 'system_random_init_vel',
+            'default': 300.0,
             'type': float
         }
     }
@@ -199,10 +213,6 @@ class AdvancedSettings:
     simulation_production_steps_values = int
     simulation_minimize_values = [True, False]
     simulation_max_minimization_steps_values = [int, None]
-    simulation_random_init_vel_values = [True, False]
-    simulation_generation_temp_values = [float, None]
-    simulation_statedata_options = {'Step index': bool, 'Time': bool, 'Speed': bool, 'Progress': bool, 'Remaining time': bool, 'Total steps': bool, 'Potential energy': bool, 'Kinetic energy': bool, 'Total energy': bool, 'Temperature': bool, 'Volume': bool, 'Density': bool}
-    simulation_statedata_options_values = [None, simulation_statedata_options]
 
     simulation_options = {
         'Report Interval': {
@@ -234,18 +244,6 @@ class AdvancedSettings:
             'depends': 'simulation_minimize',
             'default': None,
             'type': int
-        },
-        'Random init vels.': {
-            'value': 'simulation_random_init_vel_values',
-            'depends': None,
-            'default': True,
-            'type': bool
-        },
-        'Generation temp.': {
-            'value': 'simulation_generation_temp_values',
-            'depends': 'simulation_random_init_vel',
-            'default': 300,
-            'type': float
         }
     }
 
@@ -279,6 +277,8 @@ class AdvancedSettings:
         self.system_barostat = None
         self.system_barostat_interval = None
         self.system_thermostat = None
+        self.system_random_init_vel = None
+        self.system_generation_temp = None
         self.system = None
         # integrator settings
         self.integrator_integrator = None
@@ -291,8 +291,6 @@ class AdvancedSettings:
         self.simulation_production_steps = None
         self.simulation_minimize = None
         self.simulation_max_minimization_steps = None
-        self.simulation_random_init_vel = None
-        self.simulation_statedata_options = None
         self.simulation = None
         # TODO: update
         self._reporter = None

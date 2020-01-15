@@ -129,6 +129,7 @@ class MDSimulation(nanome.PluginInstance):
             try:
                 self.__start = timer()
                 self.__process.init_simulation(complex_list)
+                self.send_notification(nanome.util.enums.NotificationTypes.message, "Simulating...")
                 self.__process.simulate(complex_list)
                 return
             except:
