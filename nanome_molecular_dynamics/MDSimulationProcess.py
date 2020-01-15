@@ -19,7 +19,7 @@ from .AdvancedSettings import AdvancedSettings
 
 nanometer = nano * meter
 picosecond = pico * second
-nb_steps = 10
+nb_steps = 1000
 metalElements = ['Al','As','Ba','Ca','Cd','Ce','Co','Cs','Cu','Dy','Fe','Gd','Hg','Ho','In','Ir','K','Li','Mg',
         'Mn','Mo','Na','Ni','Pb','Pd','Pt','Rb','Rh','Sm','Sr','Te','Tl','V','W','Yb','Zn']
 
@@ -103,10 +103,10 @@ class MDSimulationProcess():
             fixer.addMissingHydrogens(7.0)
 
             (topology, positions) = self.delete_alternate_atoms(fixer.topology, fixer.positions)
-            with open('tmp2.pdb', 'w') as pdb_file:
+            with open('tmp.pdb', 'w') as pdb_file:
                 PDBFile.writeFile(topology, positions, pdb_file)
 
-            fixed_complex = nanome.structure.Complex.io.from_pdb(path="tmp2.pdb")
+            fixed_complex = nanome.structure.Complex.io.from_pdb(path="tmp.pdb")
             fixed_complex.index = complex.index
             fixed_complex.position = complex.position
             fixed_complex.rotation = complex.rotation

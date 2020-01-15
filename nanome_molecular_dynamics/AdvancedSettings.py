@@ -270,7 +270,7 @@ class AdvancedSettings:
         AdvancedSettings.Instance = self
 
         # general settings
-        self.general_pdb_name = 'tmp2.pdb'
+        self.general_pdb_name = 'tmp.pdb'
         self.general_pdb = None
         self.general_forcefield_name = None
         self.general_water_model_name = None
@@ -312,6 +312,13 @@ class AdvancedSettings:
 
         for category_name in AdvancedSettings.Options:
             self.set_to_defaults(AdvancedSettings.Options[category_name])
+
+    def reset(self):
+        self.platform = None
+        self.forcefield = None
+        self.system = None
+        self.integrator = None
+        self.simulation = None
 
     def get_setting(self, option, unit=False):
         setting_value = getattr(self, option['value'].replace('_values', ''), option['default'])
@@ -410,7 +417,7 @@ class AdvancedSettings:
             if type(values[dep_index]) not in [type, list]:
                 value = values[dep_index]
 
-        if unit:
+        if unit and value is not None:
             value = value * option['unit'] if 'unit' in option else value
 
         return (name, value)
@@ -500,11 +507,9 @@ class AdvancedSettings:
     def get_integrator(self):
         if self.integrator == None:
             params = list(self.get_options('Integrator', ['Error tolerance', 'Temperature', 'Collision rate', 'Timestep'], list))
-            print(f'PARAMS: {params}')
             self.integrator = getattr(mm, f'{self.integrator_integrator}Integrator', None)(*params)
-
-        if self.integrator_integrator == 'VariableLangevin' or self.integrator_integrator == 'VariableVerlet':
-            self.integrator.setConstraintTolerance(params[params.keys()[0]])
+            if self.integrator_integrator == 'VariableLangevin' or self.integrator_integrator == 'VariableVerlet':
+                self.integrator.setConstraintTolerance(params[0])
 
         return self.integrator
 
@@ -514,8 +519,7 @@ class AdvancedSettings:
 
         if not self.simulation:
             self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
-            simulation.context.setPositions(self.positions)
-            self._reporter = MDReporter(self.simulation)
+            self.simulation.context.setPositions(self.positions)
         return self.simulation
     # TODO
     def get_reporters(self, reporter_type, reporter_params):

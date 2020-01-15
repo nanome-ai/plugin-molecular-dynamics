@@ -1,3 +1,4 @@
+import os
 import nanome
 from nanome.util import Logs
 from nanome.util.stream import StreamCreationError
@@ -32,7 +33,6 @@ class MDSimulation(nanome.PluginInstance):
                 self.request_complexes(self._selected_complexes, self.on_complexes_received)
                 self.__first_request = False
             else:
-                print('not first request...running simulation')
                 self.__start = timer()
                 # self.request_complex_list(self.on_complex_list_received)
                 self.on_complex_list_received(None)
@@ -42,6 +42,9 @@ class MDSimulation(nanome.PluginInstance):
             self.start_simulation()
         else:
             self.stop_simulation()
+
+    def on_stop(self):
+        self.stop_simulation()
 
     def on_advanced_settings(self):
         self.__advanced_settings_menu.open()
@@ -66,6 +69,7 @@ class MDSimulation(nanome.PluginInstance):
         self.__menu.change_state(False)
         if self.__stream != None:
             self.__stream.destroy()
+        os.remove('tmp.pdb')
 
     def toggle_simulation(self):
         if (self.__running):

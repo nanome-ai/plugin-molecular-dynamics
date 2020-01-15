@@ -16,6 +16,7 @@ class MDAdvancedSettingsMenu:
         self.setup_menu()
 
     def open(self):
+        self.__settings.reset()
         self.__plugin.menu = self.__menu
         self.__plugin.menu.enabled = True
         self.__plugin.update_menu(self.__menu)
