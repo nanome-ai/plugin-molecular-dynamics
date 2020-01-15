@@ -15,9 +15,11 @@ from nanome.util import Logs
 from nanome._internal._structure._bond import _Bond
 from nanome._internal._structure._io._pdb.save import Options as PDBOptions
 
+from .AdvancedSettings import AdvancedSettings
+
 nanometer = nano * meter
 picosecond = pico * second
-nb_steps = 100
+nb_steps = 10
 metalElements = ['Al','As','Ba','Ca','Cd','Ce','Co','Cs','Cu','Dy','Fe','Gd','Hg','Ho','In','Ir','K','Li','Mg',
         'Mn','Mo','Na','Ni','Pb','Pd','Pt','Rb','Rh','Sm','Sr','Te','Tl','V','W','Yb','Zn']
 
@@ -27,7 +29,7 @@ pdb_options.write_bonds = True
 class MDSimulationProcess():
     def __init__(self, plugin):
         self.__plugin = plugin
-        self.__forcefield = ForceField('amber14-all.xml', 'amber14/tip3pfb.xml')
+        self.__forcefield = None
         self.__reporter = MDReporter(self)
 
     @staticmethod
@@ -115,6 +117,7 @@ class MDSimulationProcess():
         return fixed_complexes
 
     def init_simulation(self, complex_list):
+        self.__forcefield = AdvancedSettings.Instance.get_forcefield()
         # Create topology
         topology = Topology()
         added_atoms = dict()
@@ -213,15 +216,21 @@ class MDSimulationProcess():
             else:
                 print(f"redundant template {template.name} ********************")
 
-        system = self.__forcefield.createSystem(topology, nonbondedMethod = NoCutoff, nonbondedCutoff = 1 * nanometer, constraints = HBonds)
+        # system = self.__forcefield.createSystem(topology, nonbondedMethod = NoCutoff, nonbondedCutoff = 1 * nanometer, constraints = HBonds)
+        system = AdvancedSettings.Instance.get_system(topology)
 
         # Set the simulation
-        integrator = LangevinIntegrator(300 * kelvin, 1 / picosecond, 0.002 * picosecond)
-        simulation = Simulation(topology, system, integrator)
+        # integrator = LangevinIntegrator(300 * kelvin, 1 / picosecond, 0.002 * picosecond)
+        integrator = AdvancedSettings.Instance.get_integrator()
+        # simulation = Simulation(topology, system, integrator)
+        simulation = AdvancedSettings.Instance.get_simulation(positions)
+
         # Set reporting
         simulation.reporters.append(self.__reporter)
         simulation.context.setPositions(positions)
-        simulation.minimizeEnergy()
+        if AdvancedSettings.Instance.get_option_by_name(AdvancedSettings.Options['Simulation'], 'Minimize?'):
+            simulation.minimizeEnergy()
+
         self.__simulation = simulation
 
         self.__positions = [0.0] * ((len(positions) * 3) + 5000000)
