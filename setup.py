@@ -1,7 +1,8 @@
 import pathlib
 from setuptools import find_packages, setup
 
-README = (pathlib.Path(__file__).parent / "README.md").read_text()
+README_PATH = (pathlib.Path(__file__).parent / "README.md")
+with README_PATH.open() as f: README = f.read()
 
 setup(
 	name = 'nanome-molecular-dynamics',
