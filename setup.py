@@ -7,7 +7,7 @@ with README_PATH.open() as f: README = f.read()
 setup(
 	name = 'nanome-molecular-dynamics',
 	packages=find_packages(),
-	version = '0.0.3',
+	version = '0.1.0',
 	license='MIT',
 	description = 'Nanome Plugin to run molecular dynamics simulation on a complex',
 	long_description = README,
