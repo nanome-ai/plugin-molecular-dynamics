@@ -267,13 +267,12 @@ class AdvancedSettings:
         self.platform = None
         self.forcefield = None
         # system settings
-        self.system_nonbonded_method = 'NoCutoff'
+        self.system_nonbonded_method = None
         self.system_ewald_error_tolerance = None
         self.system_constraint = None
         self.system_contraint_error_tolerance = None
         self.system_rigid_water = None
         self.system_nonbonded_cutoff = None
-        self.system_generation_temp = None
         self.system_barostat = None
         self.system_barostat_interval = None
         self.system_thermostat = None
