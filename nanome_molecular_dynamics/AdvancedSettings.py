@@ -7,7 +7,7 @@ from simtk import unit
 class AdvancedSettings:
     # general options
     general_forcefield_name_values = ['amber14-all', 'amber10', 'amber03', 'amber99sbnmr', 'amber99sbildn', 'amber99sb', 'amber96']
-    general_water_model_name_values = ['SPC/E', 'TIP3PFB', 'TIP3P', 'TIP4P-Ew', 'TIP5P', 'Implicit Solvent (OBC)']
+    general_water_model_name_values = ['spce', 'tip3pfb', 'tip3p', 'tip4pew', 'tip4pfb', 'tip5p', 'amber10_obc']
     general_platform_name_values = ['Reference', 'OpenCL', 'CPU', 'CUDA']
     general_platform_precisions = ['single', 'mixed', 'double']
     general_platform_precision_names = [None, 'OpenCLPrecision', None, 'CudaPrecision']
@@ -27,7 +27,7 @@ class AdvancedSettings:
         'Water Model': {
             'value': 'general_water_model_name_values',
             'depends': None,
-            'default': 'TIP3PFB',
+            'default': 'tip3pfb',
             'type': str
         },
         'Platform': {
