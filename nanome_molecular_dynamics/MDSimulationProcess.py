@@ -234,9 +234,10 @@ class MDSimulationProcess():
 
         self.__simulation.context.setPositions(positions)
         if settings.simulation_minimize:
+            self.__plugin.send_notification(nanome.util.enums.NotificationTypes.message, "Minimizing...")
             self.__simulation.minimizeEnergy()
 
-        if settings.simulation_random_init_vel:
+        if settings.system_random_init_vel:
             self.__simulation.context.setVelocitiesToTemperature(settings.system_generation_temp*kelvin)
             eq_steps = settings.simulation_equilibrium_steps
             if eq_steps:
@@ -262,7 +263,7 @@ class MDSimulationProcess():
 
     def on_result_processed(self):
         if self.__plugin.running:
-            self.__simulation.step(settings.simulation_reporter_interval)
+            self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
 
 # This class is a reporter for OpenMM Simulation class
 class MDReporter(object):
@@ -273,7 +274,6 @@ class MDReporter(object):
         self.__options = list(self.__settings.simulation_reporter_options.values())
 
     def describeNextReport(self, simulation):
-
         return (self.__interval, *self.__options , None)
 
     def report(self, simulation, state):
