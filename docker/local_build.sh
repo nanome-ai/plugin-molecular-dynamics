@@ -1,1 +1,0 @@
-docker build -f molecular-dynamics.Dockerfile -t molecular-dynamics:latest ..
