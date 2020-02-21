@@ -33,7 +33,7 @@ class AdvancedSettings:
         'Platform': {
             'value': 'general_platform_name_values',
             'depends': None,
-            'default': 'CUDA',
+            'default': 'CPU',
             'type': str
         },
         'Precision': {
@@ -475,7 +475,7 @@ class AdvancedSettings:
     def get_platform_properties(self):
         return self.get_named_options('General')
 
-    def get_system(self, topology=None):
+    def get_system(self, topology=None, residueTemplates=None):
         if topology:
             self.topology = topology
 
@@ -485,7 +485,7 @@ class AdvancedSettings:
             for name, arg in args.items():
                 if type(arg) is str:
                     args[name] = getattr(app, arg, None)
-            self.system = self.get_forcefield().createSystem(self.topology, **args)
+            self.system = self.get_forcefield().createSystem(self.topology, residueTemplates=residueTemplates, **args)
         return self.system
 
     def get_integrator(self):
