@@ -485,7 +485,7 @@ class AdvancedSettings:
             for name, arg in args.items():
                 if type(arg) is str:
                     args[name] = getattr(app, arg, None)
-            self.system = self.get_forcefield().createSystem(self.topology, residueTemplates=residueTemplates, **args)
+            self.system = self.get_forcefield().createSystem(self.topology, **args)
         return self.system
 
     def get_integrator(self):
