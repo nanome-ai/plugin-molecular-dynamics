@@ -26,6 +26,16 @@ In Nanome:
 - Select complex to use for simulation. Be careful: plugin will modify the complex to prepare it for simulation
 - Click on Start
 
+### Docker Usage
+
+To run in a Docker container:
+
+```sh
+$ cd docker
+$ ./build.sh
+$ ./deploy.sh -a <plugin_server_address>
+```
+
 ### License
 
 MIT
