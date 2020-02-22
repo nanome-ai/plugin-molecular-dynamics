@@ -33,7 +33,7 @@ class AdvancedSettings:
         'Platform': {
             'value': 'general_platform_name_values',
             'depends': None,
-            'default': 'CUDA',
+            'default': 'CPU',
             'type': str
         },
         'Precision': {
@@ -475,7 +475,7 @@ class AdvancedSettings:
     def get_platform_properties(self):
         return self.get_named_options('General')
 
-    def get_system(self, topology=None):
+    def get_system(self, topology=None, residueTemplates=None):
         if topology:
             self.topology = topology
 
