@@ -4,9 +4,11 @@ FROM continuumio/miniconda3 as conda
 
 ENV ARGS=''
 
-RUN pip install nanome
 RUN conda install -c omnia/label/cuda80 openmm
 RUN conda install -c omnia pdbfixer
+
+ARG CACHEBUST
+RUN pip install nanome
 
 COPY . /app
 WORKDIR /app

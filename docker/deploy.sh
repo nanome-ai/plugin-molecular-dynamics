@@ -1,5 +1,6 @@
+#!/bin/bash
+
 if [ "$(docker ps -aq -f name=molecular-dynamics)" != "" ]; then
-    # cleanup
     echo "removing exited container"
     docker rm -f molecular-dynamics
 fi
