@@ -1,0 +1,468 @@
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 28 
+=======================================
+
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_net_instance.py", line 66, in receive
+    data = self._connection.recv(4096)
+  File "E:\anaconda3\lib\ssl.py", line 1056, in recv
+    return self.read(buflen)
+  File "E:\anaconda3\lib\ssl.py", line 931, in read
+    return self._sslobj.read(len)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+Trying to reconnect...
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 28 
+=======================================
+
+Connected to server plugins.nanome.ai 8888
+Registered with plugin ID 311 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 131, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 191, in init_simulation
+    (unique_res_bonds, unique_tmp_bonds) = ForceField.findMissingBonds(residue, template)
+AttributeError: type object 'ForceField' has no attribute 'findMissingBonds'
+
+Error: Cannot deliver packet to plugin 3618 Did it crash?
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Connected to server plugins.nanome.ai 8888
+Registered with plugin ID 312 
+=======================================
+
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_net_instance.py", line 66, in receive
+    data = self._connection.recv(4096)
+  File "E:\anaconda3\lib\ssl.py", line 1056, in recv
+    return self.read(buflen)
+  File "E:\anaconda3\lib\ssl.py", line 931, in read
+    return self._sslobj.read(len)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 8888 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Connected to server plugins.nanome.ai 8888
+Registered with plugin ID 312 
+=======================================
+
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_net_instance.py", line 66, in receive
+    data = self._connection.recv(4096)
+  File "E:\anaconda3\lib\ssl.py", line 1056, in recv
+    return self.read(buflen)
+  File "E:\anaconda3\lib\ssl.py", line 931, in read
+    return self._sslobj.read(len)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+Trying to reconnect...
+Connected to server plugins.nanome.ai 8888
+Registered with plugin ID 312 
+=======================================
+
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_net_instance.py", line 66, in receive
+    data = self._connection.recv(4096)
+  File "E:\anaconda3\lib\ssl.py", line 1056, in recv
+    return self.read(buflen)
+  File "E:\anaconda3\lib\ssl.py", line 931, in read
+    return self._sslobj.read(len)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+Trying to reconnect...
+Connected to server plugins.nanome.ai 8888
+Connected to server plugins.nanome.ai 8888
+Registered with plugin ID 313 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 131, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 505, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 131, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 505, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 131, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 505, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 131, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 505, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 131, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 505, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 34 
+=======================================
+
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 41 
+=======================================
+
+Connected to server plugins.nanome.ai 8888
+Registered with plugin ID 314 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Connected to server plugins.nanome.ai 8888
+Registered with plugin ID 315 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 266, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 46 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 266, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 266, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 51 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 266, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 53 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 266, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Warning: Received a command from an unregistered session 20
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
