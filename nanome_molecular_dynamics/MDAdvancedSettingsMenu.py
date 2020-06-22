@@ -1,7 +1,7 @@
 import re
 from os import path
 from functools import partial
-
+from nanome.util import Logs
 import nanome
 from .AdvancedSettings import AdvancedSettings
 MENU_PATH = path.join(path.dirname(path.realpath(__file__)), "json/menus/advanced_settings.json")
@@ -40,23 +40,40 @@ class MDAdvancedSettingsMenu:
         category_options = AdvancedSettings.Options[category_name]
         # loop through each option
         # last_seperator = None # needed?
+        option_counter = 0
         for display_name in category_options:
-            ln_option = nanome.ui.LayoutNode()
-            category_view.add_child(ln_option)
             option = category_options[display_name]
             disabled, display_value, display_type = self.__settings.get_option_display(option)
+            ln_option = nanome.ui.LayoutNode()
+            ln_option.sizing_type = 1
+            ln_option.set_size_fixed(0.001)
+            ln_option.set_padding(0,0,0.01,0.01)
+            category_view.add_child(ln_option)
+            
+            if display_type is dict:
+                ln_option.set_size_fixed(0.001*len(display_value))
+                option_counter += len(display_value)-1
             self.draw_option(category_name, ln_option, option, display_name, display_type, display_value, disabled)
             option['layout_node'] = ln_option
+            option_counter += 1
 
-            ln_seperator = nanome.ui.LayoutNode()
-            last_seperator = ln_seperator
-            ln_seperator.sizing_type = nanome.util.enums.SizingTypes.ratio
-            ln_seperator.sizing_value = 0.03
-            ln_seperator.padding = (0.0, 0.0, 0.01, 0.01)
-            seperator = ln_seperator.add_new_mesh()
-            seperator.mesh_color = nanome.util.color.Color(127, 127, 127)
-            category_view.add_child(ln_seperator)
-        category_view.remove_child(last_seperator)
+            # ln_seperator = nanome.ui.LayoutNode()
+            # last_seperator = ln_seperator
+            # ln_seperator.sizing_type = nanome.util.enums.SizingTypes.ratio
+            # ln_seperator.sizing_value = 0.03
+            # ln_seperator.padding = (0.0, 0.0, 0.01, 0.01)
+            # seperator = ln_seperator.add_new_mesh()
+            # seperator.mesh_color = nanome.util.color.Color(127, 127, 127)
+            # category_view.add_child(ln_seperator)
+        # category_view.remove_child(last_seperator)
+        while option_counter < 9:
+            ln_option = nanome.ui.LayoutNode()
+            ln_option.sizing_type = 1
+            ln_option.set_size_fixed(0.001)
+            ln_option.set_padding(0,0,0.01,0.01)
+            category_view.add_child(ln_option)
+            option_counter += 1
+        
 
     def redraw_changed_options(self, category_name):
         category_view = self.__menu.root.find_node(f'{category_name} Settings View')
@@ -83,7 +100,7 @@ class MDAdvancedSettingsMenu:
         # loop through each option category
         for category_name in AdvancedSettings.Options.keys():
             self.render_category(category_name)
-
+ 
     def update_display_value(self, choice_cell):
         content = choice_cell.get_content()
         if type(content) is nanome.ui.Button:
@@ -103,9 +120,16 @@ class MDAdvancedSettingsMenu:
         ln.disabled = disabled
 
         if display_name:
+            ln_label_wrapper = nanome.ui.LayoutNode()
             ln_label = nanome.ui.LayoutNode()
             ln_label.add_new_label(display_name)
-            ln.add_child(ln_label)
+            label_text = ln_label.get_content()
+            label_text._text_auto_size = False
+            label_text._text_size = 0.35
+            label_text._text_bold = True
+            label_text._text_vertical_align = 1
+            ln_label_wrapper.add_child(ln_label)
+            ln.add_child(ln_label_wrapper)
 
         choice_cell = nanome.ui.LayoutNode()
         choice_cell.forward_dist = 0.002
@@ -120,7 +144,6 @@ class MDAdvancedSettingsMenu:
         choice_cell.settings_value = self.__settings.get_setting(option)
         ln.add_child(choice_cell)
         ln.choice_cell = choice_cell
-
         if display_type is list or display_type is dict:
             choices_list = choice_cell.add_new_list()
             choices_list.display_rows = 2
@@ -135,20 +158,29 @@ class MDAdvancedSettingsMenu:
             elif display_type is dict:
                 option_dict = display_value
                 setting = self.__settings.get_setting(option)
+                if display_type is dict and display_name:
+                    label_text._text_vertical_align = 1
+                    for _ in range(len(display_value)):
+                        ln_label_wrapper.add_child(nanome.ui.LayoutNode())
                 for suboption_name in option_dict:
                     ln_option = nanome.ui.LayoutNode()
                     choices_list.items.append(ln_option)
                     child_display_value = setting[suboption_name]
                     child_display_type  = type(child_display_value)
+                   
                     self.draw_option(category_name, ln_option, option, suboption_name, child_display_type, child_display_value, disabled, choice_cell)
         else:
             if display_type in [int, float]:
-                content = choice_cell.add_new_text_input()
+                text_input_wrapper = nanome.ui.LayoutNode()
+                text_input_wrapper.set_padding(0,0,0.01,0.01)
+                text_input_wrapper._forward_dist = 0.002
+                content = text_input_wrapper.add_new_text_input()
+                choice_cell.add_child(text_input_wrapper)
                 content.register_changed_callback(partial(self.fix_input, choice_cell))
                 content.register_submitted_callback(partial(self.handle_input_submitted, choice_cell))
                 suboption_name = None if parent is None else display_name
                 if disabled:
-                    disabled_mesh = choice_cell.add_new_mesh()
+                    disabled_mesh = text_input_wrapper.add_new_mesh()
                     disabled_mesh.mesh_color = nanome.util.color.Color(127, 127, 127)
                 else:
                     content.placeholder_text = ''
@@ -214,7 +246,7 @@ class MDAdvancedSettingsMenu:
                 for ln_subcell in choice_cell.parent_cell.child_cells:
                     # None of its children are actually buttons, find the buttons another way!
                     ln_subcell.get_content().selected = False
-                choice_cell.get_content().selected = True
+                choice_cell.get_content().selected = True 
             # otherwise if the parent is a dictionary
             elif choice_cell.parent_cell.display_type is dict:
                 # toggle the value of the child in the parent (multi select)
