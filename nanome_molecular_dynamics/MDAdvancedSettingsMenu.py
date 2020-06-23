@@ -4,6 +4,8 @@ from functools import partial
 from nanome.util import Logs
 import nanome
 from .AdvancedSettings import AdvancedSettings
+from nanome.api.ui import Dropdown,DropdownItem
+
 MENU_PATH = path.join(path.dirname(path.realpath(__file__)), "json/menus/advanced_settings.json")
 
 class MDAdvancedSettingsMenu:
@@ -105,6 +107,7 @@ class MDAdvancedSettingsMenu:
         content = choice_cell.get_content()
         if type(content) is nanome.ui.Button:
             content.set_all_text(str(choice_cell.display_value))
+            #content.value.set_all(str(choice_cell.display_value))
         elif type(content) is nanome.ui.TextInput:
             content.input_text = self.__settings.get_settings(option)
         elif type(content) is nanome.ui.UIList:
@@ -118,14 +121,17 @@ class MDAdvancedSettingsMenu:
     def draw_option(self, category_name, ln, option, display_name, display_type, display_value, disabled, parent=None):
         ln.layout_orientation = nanome.util.enums.LayoutTypes.horizontal
         ln.disabled = disabled
-
         if display_name:
             ln_label_wrapper = nanome.ui.LayoutNode()
             ln_label = nanome.ui.LayoutNode()
             ln_label.add_new_label(display_name)
             label_text = ln_label.get_content()
-            label_text._text_auto_size = False
-            label_text._text_size = 0.35
+            if parent == None:
+                label_text._text_auto_size = False
+                label_text._text_size = 0.3
+            else:
+                label_text._text_auto_size = False
+                label_text._text_size = 0.25
             label_text._text_bold = True
             label_text._text_vertical_align = 1
             ln_label_wrapper.add_child(ln_label)
@@ -145,17 +151,31 @@ class MDAdvancedSettingsMenu:
         ln.add_child(choice_cell)
         ln.choice_cell = choice_cell
         if display_type is list or display_type is dict:
-            choices_list = choice_cell.add_new_list()
-            choices_list.display_rows = 2
-
+            
             if display_type is list:
+               
+                # choices_list = choice_cell.add_new_list()
+                # choices_list.display_rows = 2
+
+                # for option_value in display_value:
+                #     ln_option = nanome.ui.LayoutNode()
+                #     choices_list.items.append(ln_option)
+                #     child_display_value = option_value
+                #     child_display_type  = type(option_value)
+                #     self.draw_option(category_name, ln_option, option, '', child_display_type, child_display_value, disabled, choice_cell)
+                choices_dropdown = choice_cell.add_new_dropdown()
+                choice_cell.forward_dist = 0.003
+                dropdown_list = []
                 for option_value in display_value:
-                    ln_option = nanome.ui.LayoutNode()
-                    choices_list.items.append(ln_option)
-                    child_display_value = option_value
-                    child_display_type  = type(option_value)
-                    self.draw_option(category_name, ln_option, option, '', child_display_type, child_display_value, disabled, choice_cell)
+                    dd_item = DropdownItem()
+                    dd_item._name = str(option_value)
+                    dropdown_list.append(dd_item)
+                choices_dropdown.items = dropdown_list
+                    
             elif display_type is dict:
+                choices_list = choice_cell.add_new_list()
+                choices_list.display_rows = len(display_value)
+
                 option_dict = display_value
                 setting = self.__settings.get_setting(option)
                 if display_type is dict and display_name:

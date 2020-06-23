@@ -1778,3 +1778,961 @@ Warning: Plugin Library might be outdated: received a serializer version for an 
 Registered new session: 46
 Plugin constructed for session 46
 Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 172 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 46
+Plugin constructed for session 46
+Starting plugin
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Session 46 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 174 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 47
+Plugin constructed for session 47
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 175 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 47
+Plugin constructed for session 47
+Starting plugin
+['amber14-all', 'amber10', 'amber03', 'amber99sbnmr', 'amber99sbildn', 'amber99sb', 'amber96']
+amber14-all
+amber10
+amber03
+amber99sbnmr
+amber99sbildn
+amber99sb
+amber96
+['spce', 'tip3pfb', 'tip3p', 'tip4pew', 'tip4pfb', 'tip5p', 'amber10_obc']
+spce
+tip3pfb
+tip3p
+tip4pew
+tip4pfb
+tip5p
+amber10_obc
+['Reference', 'OpenCL', 'CPU', 'CUDA']
+Reference
+OpenCL
+CPU
+CUDA
+['single', 'mixed', 'double']
+single
+mixed
+double
+<class 'int'>
+<class 'int'>
+['NoCutoff', 'CutoffNonPeriodic', 'CutoffPeriodic', 'Ewald', 'PME']
+NoCutoff
+CutoffNonPeriodic
+CutoffPeriodic
+Ewald
+PME
+<class 'float'>
+['None', 'HBonds', 'AllBonds', 'HAngles']
+None
+HBonds
+AllBonds
+HAngles
+<class 'float'>
+[True, False]
+True
+False
+<class 'float'>
+[True, False]
+True
+False
+<class 'float'>
+['Langevin', 'Verlet', 'Brownian', 'VariableLangevin', 'VariableVerlet']
+Langevin
+Verlet
+Brownian
+VariableLangevin
+VariableVerlet
+<class 'float'>
+<class 'float'>
+<class 'float'>
+<class 'float'>
+['None', 'Monte Carlo']
+None
+Monte Carlo
+<class 'float'>
+<class 'int'>
+['None', 'Andersen']
+None
+Andersen
+200
+{'Positions': True, 'Velocities': False, 'Forces': False, 'Energies': False}
+True
+False
+False
+False
+1000
+[True, False]
+True
+False
+<class 'int'>
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 176 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 47
+Plugin constructed for session 47
+Starting plugin
+['amber14-all', 'amber10', 'amber03', 'amber99sbnmr', 'amber99sbildn', 'amber99sb', 'amber96']
+amber14-all
+amber10
+amber03
+amber99sbnmr
+amber99sbildn
+amber99sb
+amber96
+['spce', 'tip3pfb', 'tip3p', 'tip4pew', 'tip4pfb', 'tip5p', 'amber10_obc']
+spce
+tip3pfb
+tip3p
+tip4pew
+tip4pfb
+tip5p
+amber10_obc
+['Reference', 'OpenCL', 'CPU', 'CUDA']
+Reference
+OpenCL
+CPU
+CUDA
+['single', 'mixed', 'double']
+single
+mixed
+double
+<class 'int'>
+<class 'int'>
+['NoCutoff', 'CutoffNonPeriodic', 'CutoffPeriodic', 'Ewald', 'PME']
+NoCutoff
+CutoffNonPeriodic
+CutoffPeriodic
+Ewald
+PME
+<class 'float'>
+['None', 'HBonds', 'AllBonds', 'HAngles']
+None
+HBonds
+AllBonds
+HAngles
+<class 'float'>
+[True, False]
+True
+False
+<class 'float'>
+[True, False]
+True
+False
+<class 'float'>
+['Langevin', 'Verlet', 'Brownian', 'VariableLangevin', 'VariableVerlet']
+Langevin
+Verlet
+Brownian
+VariableLangevin
+VariableVerlet
+<class 'float'>
+<class 'float'>
+<class 'float'>
+<class 'float'>
+['None', 'Monte Carlo']
+None
+Monte Carlo
+<class 'float'>
+<class 'int'>
+['None', 'Andersen']
+None
+Andersen
+200
+{'Positions': True, 'Velocities': False, 'Forces': False, 'Energies': False}
+True
+False
+False
+False
+1000
+[True, False]
+True
+False
+<class 'int'>
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 179 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 47
+Plugin constructed for session 47
+Starting plugin
+['amber14-all', 'amber10', 'amber03', 'amber99sbnmr', 'amber99sbildn', 'amber99sb', 'amber96']
+amber14-all
+amber10
+amber03
+amber99sbnmr
+amber99sbildn
+amber99sb
+amber96
+['spce', 'tip3pfb', 'tip3p', 'tip4pew', 'tip4pfb', 'tip5p', 'amber10_obc']
+spce
+tip3pfb
+tip3p
+tip4pew
+tip4pfb
+tip5p
+amber10_obc
+['Reference', 'OpenCL', 'CPU', 'CUDA']
+Reference
+OpenCL
+CPU
+CUDA
+['single', 'mixed', 'double']
+single
+mixed
+double
+<class 'int'>
+<class 'int'>
+['NoCutoff', 'CutoffNonPeriodic', 'CutoffPeriodic', 'Ewald', 'PME']
+NoCutoff
+CutoffNonPeriodic
+CutoffPeriodic
+Ewald
+PME
+<class 'float'>
+['None', 'HBonds', 'AllBonds', 'HAngles']
+None
+HBonds
+AllBonds
+HAngles
+<class 'float'>
+[True, False]
+True
+False
+<class 'float'>
+[True, False]
+True
+False
+<class 'float'>
+['Langevin', 'Verlet', 'Brownian', 'VariableLangevin', 'VariableVerlet']
+Langevin
+Verlet
+Brownian
+VariableLangevin
+VariableVerlet
+<class 'float'>
+<class 'float'>
+<class 'float'>
+<class 'float'>
+['None', 'Monte Carlo']
+None
+Monte Carlo
+<class 'float'>
+<class 'int'>
+['None', 'Andersen']
+None
+Andersen
+200
+{'Positions': True, 'Velocities': False, 'Forces': False, 'Energies': False}
+True
+False
+False
+False
+1000
+[True, False]
+True
+False
+<class 'int'>
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 180 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 47
+Plugin constructed for session 47
+Starting plugin
+['amber14-all', 'amber10', 'amber03', 'amber99sbnmr', 'amber99sbildn', 'amber99sb', 'amber96']
+amber14-all
+amber10
+amber03
+amber99sbnmr
+amber99sbildn
+amber99sb
+amber96
+['spce', 'tip3pfb', 'tip3p', 'tip4pew', 'tip4pfb', 'tip5p', 'amber10_obc']
+spce
+tip3pfb
+tip3p
+tip4pew
+tip4pfb
+tip5p
+amber10_obc
+['Reference', 'OpenCL', 'CPU', 'CUDA']
+Reference
+OpenCL
+CPU
+CUDA
+['single', 'mixed', 'double']
+single
+mixed
+double
+<class 'int'>
+<class 'int'>
+['NoCutoff', 'CutoffNonPeriodic', 'CutoffPeriodic', 'Ewald', 'PME']
+NoCutoff
+CutoffNonPeriodic
+CutoffPeriodic
+Ewald
+PME
+<class 'float'>
+['None', 'HBonds', 'AllBonds', 'HAngles']
+None
+HBonds
+AllBonds
+HAngles
+<class 'float'>
+[True, False]
+True
+False
+<class 'float'>
+[True, False]
+True
+False
+<class 'float'>
+['Langevin', 'Verlet', 'Brownian', 'VariableLangevin', 'VariableVerlet']
+Langevin
+Verlet
+Brownian
+VariableLangevin
+VariableVerlet
+<class 'float'>
+<class 'float'>
+<class 'float'>
+<class 'float'>
+['None', 'Monte Carlo']
+None
+Monte Carlo
+<class 'float'>
+<class 'int'>
+['None', 'Andersen']
+None
+Andersen
+200
+{'Positions': True, 'Velocities': False, 'Forces': False, 'Energies': False}
+True
+False
+False
+False
+1000
+[True, False]
+True
+False
+<class 'int'>
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 186 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 47
+Plugin constructed for session 47
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 187 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 47
+Plugin constructed for session 47
+Starting plugin
+Start Simulation
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+First Request: 0.6182742000000019
+Second Request: 0.8969098999999972
+Stream creation: 1.1751416999999975
+Create topology
+Create topology
+Create topology
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 131, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 505, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Stop Simulation
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 195 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 51
+Plugin constructed for session 51
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 197 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 51
+Plugin constructed for session 51
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 200 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 51
+Plugin constructed for session 51
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 201 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 51
+Plugin constructed for session 51
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 202 
+=======================================
+
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: Dropdown Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: DropdownCallback Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFilesItem Version: 0
+Warning: Plugin Library might be outdated: received a serializer version for an unknown serializer: ExportFiles Version: 0
+Registered new session: 51
+Plugin constructed for session 51
+Starting plugin
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+herererere
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 204 
+=======================================
+
+Registered new session: 54
+Plugin constructed for session 54
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_advanced_settings.py", line 2, in _advanced_settings
+    network.on_advanced_settings()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 17, in on_advanced_settings
+    self._plugin.on_advanced_settings()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 39, in on_advanced_settings
+    self.__advanced_settings_menu.open()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 24, in open
+    self.__plugin.update_menu(self.__menu)
+  File "E:\anaconda3\lib\site-packages\nanome\api\plugin_instance.py", line 204, in update_menu
+    self._network._send(_Messages.menu_update, menu, False)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 41, in _send
+    return cls.__send(code, cls._instance.__version_table, arg, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 47, in __send
+    to_send = self._serializer.serialize_message(command_id, code, arg, version_table, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_serializer.py", line 32, in serialize_message
+    context.write_using_serializer(command, arg)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_serialization\_ui\_update_menu.py", line 26, in serialize
+    context.write_using_serializer(self.array, value._get_all_content())
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_ui_base_serializer.py", line 44, in serialize
+    context.write_using_serializer(serializer, value)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_serializer.py", line 23, in serialize
+    context.write_using_serializer(self.items, value._items)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_item_serializer.py", line 16, in serialize
+    context.write_using_serializer(self.string, value._name)
+AttributeError: 'str' object has no attribute '_name'
+
+Error: Plugin encountered an error
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 205 
+=======================================
+
+Registered new session: 54
+Plugin constructed for session 54
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_advanced_settings.py", line 2, in _advanced_settings
+    network.on_advanced_settings()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 17, in on_advanced_settings
+    self._plugin.on_advanced_settings()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 39, in on_advanced_settings
+    self.__advanced_settings_menu.open()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 24, in open
+    self.__plugin.update_menu(self.__menu)
+  File "E:\anaconda3\lib\site-packages\nanome\api\plugin_instance.py", line 204, in update_menu
+    self._network._send(_Messages.menu_update, menu, False)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 41, in _send
+    return cls.__send(code, cls._instance.__version_table, arg, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 47, in __send
+    to_send = self._serializer.serialize_message(command_id, code, arg, version_table, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_serializer.py", line 32, in serialize_message
+    context.write_using_serializer(command, arg)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_serialization\_ui\_update_menu.py", line 26, in serialize
+    context.write_using_serializer(self.array, value._get_all_content())
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_ui_base_serializer.py", line 44, in serialize
+    context.write_using_serializer(serializer, value)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_serializer.py", line 23, in serialize
+    context.write_using_serializer(self.items, value._items)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_item_serializer.py", line 16, in serialize
+    context.write_using_serializer(self.string, value._name)
+AttributeError: 'str' object has no attribute '_name'
+
+Stop Simulation
+Error: Plugin encountered an error
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 206 
+=======================================
+
+Registered new session: 54
+Plugin constructed for session 54
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_advanced_settings.py", line 2, in _advanced_settings
+    network.on_advanced_settings()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 17, in on_advanced_settings
+    self._plugin.on_advanced_settings()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 39, in on_advanced_settings
+    self.__advanced_settings_menu.open()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 24, in open
+    self.__plugin.update_menu(self.__menu)
+  File "E:\anaconda3\lib\site-packages\nanome\api\plugin_instance.py", line 204, in update_menu
+    self._network._send(_Messages.menu_update, menu, False)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 41, in _send
+    return cls.__send(code, cls._instance.__version_table, arg, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 47, in __send
+    to_send = self._serializer.serialize_message(command_id, code, arg, version_table, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_serializer.py", line 32, in serialize_message
+    context.write_using_serializer(command, arg)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_serialization\_ui\_update_menu.py", line 26, in serialize
+    context.write_using_serializer(self.array, value._get_all_content())
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_ui_base_serializer.py", line 44, in serialize
+    context.write_using_serializer(serializer, value)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_serializer.py", line 23, in serialize
+    context.write_using_serializer(self.items, value._items)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_item_serializer.py", line 16, in serialize
+    context.write_using_serializer(self.string, value._name)
+AttributeError: 'str' object has no attribute '_name'
+
+Error: Plugin encountered an error
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 207 
+=======================================
+
+Registered new session: 54
+Plugin constructed for session 54
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 208 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 211 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_advanced_settings.py", line 2, in _advanced_settings
+    network.on_advanced_settings()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 17, in on_advanced_settings
+    self._plugin.on_advanced_settings()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 39, in on_advanced_settings
+    self.__advanced_settings_menu.open()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 24, in open
+    self.__plugin.update_menu(self.__menu)
+  File "E:\anaconda3\lib\site-packages\nanome\api\plugin_instance.py", line 204, in update_menu
+    self._network._send(_Messages.menu_update, menu, False)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 41, in _send
+    return cls.__send(code, cls._instance.__version_table, arg, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 47, in __send
+    to_send = self._serializer.serialize_message(command_id, code, arg, version_table, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_serializer.py", line 32, in serialize_message
+    context.write_using_serializer(command, arg)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_serialization\_ui\_update_menu.py", line 26, in serialize
+    context.write_using_serializer(self.array, value._get_all_content())
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_ui_base_serializer.py", line 44, in serialize
+    context.write_using_serializer(serializer, value)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_serializer.py", line 23, in serialize
+    context.write_using_serializer(self.items, value._items)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_item_serializer.py", line 16, in serialize
+    context.write_using_serializer(self.string, value._name)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_string_serializer.py", line 24, in serialize
+    to_write = to_bytes(value, 'utf-8')
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_string_serializer.py", line 7, in to_bytes
+    return bytes(value, 'utf-8')
+TypeError: encoding without a string argument
+
+Stop Simulation
+Error: Plugin encountered an error
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 212 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 213 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 214 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 215 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Start Simulation
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+First Request: 0.5661565999999998
+Second Request: 0.7832865999999998
+Stream creation: 1.0339812
+Create topology
+Create topology
+Create topology
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 131, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 505, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Stop Simulation
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 216 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 217 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 218 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 219 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 68, in _run
+    self.start()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 26, in start
+    self.__advanced_settings_menu = MDAdvancedSettingsMenu(self, self.open_main_menu)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 18, in __init__
+    self.setup_menu()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 104, in setup_menu
+    self.render_category(category_name)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 58, in render_category
+    self.draw_option(category_name, ln_option, option, display_name, display_type, display_value, disabled)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 167, in draw_option
+    choices_cell.forward_dist = 0.003
+NameError: name 'choices_cell' is not defined
+
+Stop Simulation
+Error: Plugin encountered an error
+Warning: Received a command from an unregistered session 55
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 220 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 221 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_ui_callbacks.py", line 72, in _button_pressed
+    btn._on_button_pressed()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_button.py", line 32, in _on_button_pressed
+    self._pressed_callback(self)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 283, in handle_button_pressed
+    self.update_display_value(choice_cell)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 110, in update_display_value
+    content.value.set_all(str(choice_cell.display_value))
+AttributeError: 'Button' object has no attribute 'value'
+
+Error: Plugin encountered an error
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 222 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 223 
+=======================================
+
+Registered new session: 55
+Plugin constructed for session 55
+Starting plugin
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Session 55 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 224 
+=======================================
+
+Registered new session: 56
+Plugin constructed for session 56
+Starting plugin
+Session 56 disconnected
