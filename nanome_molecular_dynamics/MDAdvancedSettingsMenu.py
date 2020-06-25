@@ -46,6 +46,7 @@ class MDAdvancedSettingsMenu:
         for display_name in category_options:
             option = category_options[display_name]
             disabled, display_value, display_type = self.__settings.get_option_display(option)
+            default_value = self.__settings.get_option_default(option)
             ln_option = nanome.ui.LayoutNode()
             ln_option.sizing_type = 1
             ln_option.set_size_fixed(0.001)
@@ -55,7 +56,7 @@ class MDAdvancedSettingsMenu:
             if display_type is dict:
                 ln_option.set_size_fixed(0.001*len(display_value))
                 option_counter += len(display_value)-1
-            self.draw_option(category_name, ln_option, option, display_name, display_type, display_value, disabled)
+            self.draw_option(category_name, ln_option, option, display_name, display_type, display_value, disabled, default = default_value)
             option['layout_node'] = ln_option
             option_counter += 1
 
@@ -118,7 +119,7 @@ class MDAdvancedSettingsMenu:
 
         self.__plugin.update_content(content)
 
-    def draw_option(self, category_name, ln, option, display_name, display_type, display_value, disabled, parent=None):
+    def draw_option(self, category_name, ln, option, display_name, display_type, display_value, disabled, parent=None, default = None):
         ln.layout_orientation = nanome.util.enums.LayoutTypes.horizontal
         ln.disabled = disabled
         if display_name:
@@ -159,19 +160,22 @@ class MDAdvancedSettingsMenu:
 
                 # for option_value in display_value:
                 #     ln_option = nanome.ui.LayoutNode()
-                #     choices_list.items.append(ln_option)
+                #     choices_list.items.append(ln_option) 
                 #     child_display_value = option_value
                 #     child_display_type  = type(option_value)
                 #     self.draw_option(category_name, ln_option, option, '', child_display_type, child_display_value, disabled, choice_cell)
                 choices_dropdown = choice_cell.add_new_dropdown()
                 choice_cell.forward_dist = 0.003
                 dropdown_list = []
-                for option_value in display_value:
+                for i,option_value in enumerate(display_value):
                     dd_item = DropdownItem()
                     dd_item._name = str(option_value)
+                    #dd_item._selected = self.__settings.get_setting(option) == default
                     dropdown_list.append(dd_item)
                 choices_dropdown.items = dropdown_list
-                    
+                #choices_dropdown._permanent_title = str(default)
+                #choices_dropdown._use_permanent_title = True
+
             elif display_type is dict:
                 choices_list = choice_cell.add_new_list()
                 choices_list.display_rows = len(display_value)

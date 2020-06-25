@@ -2736,3 +2736,316 @@ Registered new session: 56
 Plugin constructed for session 56
 Starting plugin
 Session 56 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 229 
+=======================================
+
+Registered new session: 58
+Plugin constructed for session 58
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 230 
+=======================================
+
+Registered new session: 58
+Plugin constructed for session 58
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 231 
+=======================================
+
+Registered new session: 58
+Plugin constructed for session 58
+Starting plugin
+Session 58 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 232 
+=======================================
+
+Registered new session: 59
+Plugin constructed for session 59
+Starting plugin
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Session 59 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 233 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_advanced_settings.py", line 2, in _advanced_settings
+    network.on_advanced_settings()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 17, in on_advanced_settings
+    self._plugin.on_advanced_settings()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 39, in on_advanced_settings
+    self.__advanced_settings_menu.open()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 24, in open
+    self.__plugin.update_menu(self.__menu)
+  File "E:\anaconda3\lib\site-packages\nanome\api\plugin_instance.py", line 204, in update_menu
+    self._network._send(_Messages.menu_update, menu, False)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 41, in _send
+    return cls.__send(code, cls._instance.__version_table, arg, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 47, in __send
+    to_send = self._serializer.serialize_message(command_id, code, arg, version_table, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_serializer.py", line 32, in serialize_message
+    context.write_using_serializer(command, arg)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_serialization\_ui\_update_menu.py", line 26, in serialize
+    context.write_using_serializer(self.array, value._get_all_content())
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_ui_base_serializer.py", line 44, in serialize
+    context.write_using_serializer(serializer, value)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_serializer.py", line 21, in serialize
+    context.write_using_serializer(self.string, value._permanent_title)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_string_serializer.py", line 24, in serialize
+    to_write = to_bytes(value, 'utf-8')
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_string_serializer.py", line 7, in to_bytes
+    return bytes(value, 'utf-8')
+TypeError: encoding without a string argument
+
+Error: Plugin encountered an error
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 234 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_advanced_settings.py", line 2, in _advanced_settings
+    network.on_advanced_settings()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 17, in on_advanced_settings
+    self._plugin.on_advanced_settings()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 39, in on_advanced_settings
+    self.__advanced_settings_menu.open()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 24, in open
+    self.__plugin.update_menu(self.__menu)
+  File "E:\anaconda3\lib\site-packages\nanome\api\plugin_instance.py", line 204, in update_menu
+    self._network._send(_Messages.menu_update, menu, False)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 41, in _send
+    return cls.__send(code, cls._instance.__version_table, arg, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 47, in __send
+    to_send = self._serializer.serialize_message(command_id, code, arg, version_table, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_serializer.py", line 32, in serialize_message
+    context.write_using_serializer(command, arg)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_serialization\_ui\_update_menu.py", line 26, in serialize
+    context.write_using_serializer(self.array, value._get_all_content())
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_ui_base_serializer.py", line 44, in serialize
+    context.write_using_serializer(serializer, value)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_serializer.py", line 21, in serialize
+    context.write_using_serializer(self.string, value._permanent_title)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_string_serializer.py", line 24, in serialize
+    to_write = to_bytes(value, 'utf-8')
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_string_serializer.py", line 7, in to_bytes
+    return bytes(value, 'utf-8')
+TypeError: encoding without a string argument
+
+Stop Simulation
+Error: Plugin encountered an error
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 235 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 236 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 237 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 238 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 239 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 68, in _run
+    self.start()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 26, in start
+    self.__advanced_settings_menu = MDAdvancedSettingsMenu(self, self.open_main_menu)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 18, in __init__
+    self.setup_menu()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 105, in setup_menu
+    self.render_category(category_name)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 49, in render_category
+    default_value = self._settings.get_option_default(option)
+AttributeError: 'MDAdvancedSettingsMenu' object has no attribute '_settings'
+
+Stop Simulation
+Error: Plugin encountered an error
+Warning: Received a command from an unregistered session 60
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 240 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 68, in _run
+    self.start()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 26, in start
+    self.__advanced_settings_menu = MDAdvancedSettingsMenu(self, self.open_main_menu)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 18, in __init__
+    self.setup_menu()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 105, in setup_menu
+    self.render_category(category_name)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 59, in render_category
+    self.draw_option(category_name, ln_option, option, display_name, display_type, display_value, disabled, defaul = default_value)
+TypeError: draw_option() got an unexpected keyword argument 'defaul'
+
+Stop Simulation
+Error: Plugin encountered an error
+Warning: Received a command from an unregistered session 60
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 241 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 242 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_advanced_settings.py", line 2, in _advanced_settings
+    network.on_advanced_settings()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 17, in on_advanced_settings
+    self._plugin.on_advanced_settings()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 39, in on_advanced_settings
+    self.__advanced_settings_menu.open()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDAdvancedSettingsMenu.py", line 24, in open
+    self.__plugin.update_menu(self.__menu)
+  File "E:\anaconda3\lib\site-packages\nanome\api\plugin_instance.py", line 204, in update_menu
+    self._network._send(_Messages.menu_update, menu, False)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 41, in _send
+    return cls.__send(code, cls._instance.__version_table, arg, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 47, in __send
+    to_send = self._serializer.serialize_message(command_id, code, arg, version_table, expects_response)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_serializer.py", line 32, in serialize_message
+    context.write_using_serializer(command, arg)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_serialization\_ui\_update_menu.py", line 26, in serialize
+    context.write_using_serializer(self.array, value._get_all_content())
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_array_serializer.py", line 19, in serialize
+    context.write_using_serializer(self._serializer, cur)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_ui_base_serializer.py", line 44, in serialize
+    context.write_using_serializer(serializer, value)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_ui\_serialization\_dropdown_serializer.py", line 21, in serialize
+    context.write_using_serializer(self.string, value._permanent_title)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_serialization\_context.py", line 110, in write_using_serializer
+    serializer.serialize(version, value, self)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_string_serializer.py", line 24, in serialize
+    to_write = to_bytes(value, 'utf-8')
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_util\_serializers\_string_serializer.py", line 7, in to_bytes
+    return bytes(value, 'utf-8')
+TypeError: encoding without a string argument
+
+Error: Plugin encountered an error
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 243 
+=======================================
+
+Registered new session: 60
+Plugin constructed for session 60
+Starting plugin
+Session 60 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 247 
+=======================================
+
+Registered new session: 61
+Plugin constructed for session 61
+Starting plugin
+Session 61 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 248 
+=======================================
+
+Registered new session: 64
+Plugin constructed for session 64
+Starting plugin
+Session 64 disconnected
