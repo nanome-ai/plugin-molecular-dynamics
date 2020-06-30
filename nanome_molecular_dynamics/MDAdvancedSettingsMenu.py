@@ -114,6 +114,9 @@ class MDAdvancedSettingsMenu:
         elif type(content) is nanome.ui.UIList:
             for item in content.items:
                 self.update_display_value(item.choice_cell)
+        elif type(content) is nanome.ui.Dropdown:
+            #nothing to be displayed
+            pass
         else:
             print('???')
 
@@ -171,10 +174,13 @@ class MDAdvancedSettingsMenu:
                     dd_item = DropdownItem()
                     dd_item._name = str(option_value)
                     #dd_item._selected = self.__settings.get_setting(option) == default
+                    dd_item._selected = dd_item._name == str(default)
                     dropdown_list.append(dd_item)
                 choices_dropdown.items = dropdown_list
-                #choices_dropdown._permanent_title = str(default)
-                #choices_dropdown._use_permanent_title = True
+                # Logs.debug('1.choice_cell is: ',choice_cell)
+                choices_dropdown.register_item_clicked_callback(partial(self.handle_dropdown_pressed,choice_cell))
+                
+
 
             elif display_type is dict:
                 choices_list = choice_cell.add_new_list()
@@ -191,7 +197,6 @@ class MDAdvancedSettingsMenu:
                     choices_list.items.append(ln_option)
                     child_display_value = setting[suboption_name]
                     child_display_type  = type(child_display_value)
-                   
                     self.draw_option(category_name, ln_option, option, suboption_name, child_display_type, child_display_value, disabled, choice_cell)
         else:
             if display_type in [int, float]:
@@ -283,8 +288,27 @@ class MDAdvancedSettingsMenu:
         top_cell = choice_cell.parent_cell if choice_cell.parent_cell else choice_cell
         value = top_cell.settings_value
         value = top_cell.option['type'](value) # cast the value
+        # Logs.debug("-a.top_cell is ",top_cell)
+        # Logs.debug("-0.choice_cell is ",choice_cell)
+        # Logs.debug("-1.choice_cell.option is ",choice_cell.option)
+        # Logs.debug("-2.value is ",value)
         self.__settings.set_option(choice_cell.option, value)
         self.update_display_value(choice_cell)
         self.redraw_changed_options(choice_cell.category_name)
         self.__plugin.update_menu(self.__menu)
 
+    def handle_dropdown_pressed(self,choice_cell,dropdown,item):
+        # Logs.debug("-a.top_cell is ",top_cell)
+        # Logs.debug("-0.choice_cell is ",choice_cell)
+        # Logs.debug("-1.dropdown is ",dropdown)
+        # Logs.debug("-2.item is ",item)
+        # Logs.debug("item name is: ",item._name)
+        value = item._name
+        # Logs.debug("value is ",value)
+        value = choice_cell.option['type'](value)
+        # Logs.debug("value is  ",value)
+        self.__settings.set_option(choice_cell.option,value)
+        self.update_display_value(choice_cell)
+        self.redraw_changed_options(choice_cell.category_name)
+        self.__plugin.update_menu(self.__menu)
+        

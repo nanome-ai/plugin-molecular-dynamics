@@ -27,6 +27,7 @@ class MDSimulation(nanome.PluginInstance):
         self.__process = MDSimulationProcess(self)
 
     def on_run(self):
+        self.open_main_menu()
         if self.running == False:
             self.start_simulation()
         else:
@@ -38,7 +39,7 @@ class MDSimulation(nanome.PluginInstance):
     def on_advanced_settings(self):
         self.__advanced_settings_menu.open()
 
-    def open_main_menu(self, menu):
+    def open_main_menu(self, menu = None):
         self.__menu.open()
 
     def start_simulation(self):
