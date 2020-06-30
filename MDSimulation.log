@@ -5469,3 +5469,258 @@ Connected to server plugins.nanome.ai 9999
 Registered with plugin ID 328 
 =======================================
 
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 329 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 330 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 331 
+=======================================
+
+Registered new session: 75
+Plugin constructed for session 75
+Starting plugin
+set option  (None, 'amber14-all')
+set option  (None, 'amber10')
+set option  (None, 'amber03')
+set option  (None, 'amber14-all')
+set option  (None, 'spce')
+set option  (None, 'tip3pfb')
+set option  (None, 'tip3p')
+set option  (None, 'spce')
+set option  (None, 'Reference')
+set option  (None, 'OpenCL')
+set option  (None, 'CPU')
+set option  (None, 'Reference')
+set option  (None, 'OpenCL')
+set option  ('OpenCLPrecision', 'single')
+set option  ('OpenCLPrecision', 'mixed')
+set option  ('OpenCLPrecision', 'double')
+set option  ('nonbondedMethod', 'NoCutoff')
+set option  ('nonbondedMethod', 'CutoffNonPeriodic')
+set option  ('nonbondedMethod', 'CutoffPeriodic')
+set option  ('constraints', 'None')
+set option  ('constraints', 'HBonds')
+set option  ('constraints', 'AllBonds')
+set option  ('rigidWater', True)
+set option  ('rigidWater', True)
+set option  ('rigidWater', True)
+set option  (None, True)
+set option  (None, True)
+set option  (None, 'Langevin')
+set option  (None, 'Verlet')
+set option  (None, 'Brownian')
+set option  (None, 'Langevin')
+set option  (None, 'Verlet')
+set option  (None, 'Brownian')
+set option  (None, 'Monte Carlo')
+set option  (None, None)
+set option  (None, None)
+set option  (None, None)
+set option  (None, True)
+set option  (None, True)
+set option  (None, {'Positions': False, 'Velocities': False, 'Forces': False, 'Energies': False})
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+set option  (None, {'Positions': True, 'Velocities': False, 'Forces': False, 'Energies': False})
+set option  (None, {'Positions': True, 'Velocities': True, 'Forces': False, 'Energies': False})
+set option  (None, {'Positions': True, 'Velocities': True, 'Forces': True, 'Energies': False})
+set option  (None, {'Positions': True, 'Velocities': True, 'Forces': True, 'Energies': True})
+set option  (None, {'Positions': True, 'Velocities': False, 'Forces': True, 'Energies': True})
+set option  (None, {'Positions': False, 'Velocities': False, 'Forces': True, 'Energies': True})
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 332 
+=======================================
+
+Registered new session: 76
+Plugin constructed for session 76
+Starting plugin
+value is  True
+value is   True
+choice option is  {'name': 'system_rigid_water_names', 'value': 'system_rigid_water_values', 'depends': None, 'default': True, 'type': <class 'bool'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000002B563A6C608>}
+set option  ('rigidWater', True)
+value is  False
+value is   True
+choice option is  {'name': 'system_rigid_water_names', 'value': 'system_rigid_water_values', 'depends': None, 'default': True, 'type': <class 'bool'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000002B563A6C608>}
+set option  ('rigidWater', True)
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 333 
+=======================================
+
+Registered new session: 76
+Plugin constructed for session 76
+Starting plugin
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option is  {'name': 'system_rigid_water_names', 'value': 'system_rigid_water_values', 'depends': None, 'default': True, 'type': <class 'bool'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000001382D02C588>}
+set option  ('rigidWater', True)
+value is type  <class 'str'>
+value is type  <class 'str'>
+choice option is  {'value': 'general_forcefield_name_values', 'depends': None, 'default': 'amber14-all', 'type': <class 'str'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000001382CFF1E88>}
+set option  (None, 'amber14-all')
+value is type  <class 'str'>
+value is type  <class 'str'>
+choice option is  {'value': 'system_thermostat_values', 'depends': 'integrator_integrator', 'default': 'None', 'type': <class 'str'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000001382D037408>}
+set option  (None, None)
+value is type  <class 'str'>
+value is type  <class 'str'>
+choice option is  {'value': 'system_thermostat_values', 'depends': 'integrator_integrator', 'default': 'None', 'type': <class 'str'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000001382D037408>}
+set option  (None, None)
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option is  {'value': 'simulation_minimize_values', 'depends': None, 'default': True, 'type': <class 'bool'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000001382D0452C8>}
+set option  (None, True)
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option is  {'value': 'simulation_minimize_values', 'depends': None, 'default': True, 'type': <class 'bool'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000001382D0452C8>}
+set option  (None, True)
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option is  {'value': 'simulation_minimize_values', 'depends': None, 'default': True, 'type': <class 'bool'>, 'layout_node': <nanome.api.ui.layout_node.LayoutNode object at 0x000001382D0452C8>}
+set option  (None, True)
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 334 
+=======================================
+
+Registered new session: 76
+Plugin constructed for session 76
+Starting plugin
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option ['value'] is  <class 'bool'>
+set option  (None, True)
+value is type  <class 'str'>
+value is type  <class 'str'>
+choice option ['value'] is  <class 'str'>
+set option  (None, 'amber14-all')
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 335 
+=======================================
+
+Registered new session: 76
+Plugin constructed for session 76
+Starting plugin
+Start Simulation
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+First Request: 0.4953144999999999
+Second Request: 0.7577443999999998
+Stream creation: 1.0360501999999998
+Create topology
+Create topology
+Create topology
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 507, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Stop Simulation
+value is type  <class 'str'>
+value is type  <class 'str'>
+choice option ['value'] is  <class 'str'>
+set option  (None, 'amber14-all')
+value is type  <class 'str'>
+value is type  <class 'str'>
+choice option ['value'] is  <class 'str'>
+set option  (None, 'spce')
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option ['value'] is  <class 'bool'>
+set option  ('rigidWater', True)
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option ['value'] is  <class 'bool'>
+set option  ('rigidWater', False)
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option ['value'] is  <class 'bool'>
+set option  (None, True)
+value is type  <class 'str'>
+value is type  <class 'bool'>
+choice option ['value'] is  <class 'bool'>
+set option  (None, False)
+value is type  <class 'str'>
+value is type  <class 'str'>
+choice option ['value'] is  <class 'str'>
+set option  (None, None)
+value is type  <class 'str'>
+value is type  <class 'str'>
+choice option ['value'] is  <class 'str'>
+set option  (None, None)
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 336 
+=======================================
+
+Registered new session: 76
+Plugin constructed for session 76
+Starting plugin
+value is  None
+value is  None
+choice option ['value'] is  <class 'str'>
+set option  (None, None)
+value is  Andersen
+value is  Andersen
+choice option ['value'] is  <class 'str'>
+set option  (None, None)
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 337 
+=======================================
+
+Registered new session: 76
+Plugin constructed for session 76
+Starting plugin
+value is  True
+value is  True
+choice option ['value'] is  <class 'bool'>
+check var_name and value:  system_rigid_water   True
+set option  ('rigidWater', True)
+value is  False
+value is  False
+choice option ['value'] is  <class 'bool'>
+check var_name and value:  system_rigid_water   False
+set option  ('rigidWater', False)
+value is  Andersen
+value is  Andersen
+choice option ['value'] is  <class 'str'>
+check var_name and value:  system_thermostat   Andersen
+set option  (None, None)
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 338 
+=======================================
+
+Registered new session: 76
+Plugin constructed for session 76
+Starting plugin
+-0.choice_cell is  <nanome.api.ui.layout_node.LayoutNode object at 0x0000023A4EC17748>
+value is  None
+value is  None
+choice option ['value'] is  <class 'str'>
+check var_name and value:  system_thermostat   None
+set option  (None, None)
+-0.choice_cell is  <nanome.api.ui.layout_node.LayoutNode object at 0x0000023A4EC17748>
+value is  Andersen
+value is  Andersen
+choice option ['value'] is  <class 'str'>
+check var_name and value:  system_thermostat   Andersen
+set option  (None, None)

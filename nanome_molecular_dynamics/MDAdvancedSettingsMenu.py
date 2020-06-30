@@ -299,14 +299,20 @@ class MDAdvancedSettingsMenu:
 
     def handle_dropdown_pressed(self,choice_cell,dropdown,item):
         # Logs.debug("-a.top_cell is ",top_cell)
-        # Logs.debug("-0.choice_cell is ",choice_cell)
+        Logs.debug("-0.choice_cell is ",choice_cell)
         # Logs.debug("-1.dropdown is ",dropdown)
         # Logs.debug("-2.item is ",item)
         # Logs.debug("item name is: ",item._name)
         value = item._name
-        # Logs.debug("value is ",value)
-        value = choice_cell.option['type'](value)
-        # Logs.debug("value is  ",value)
+        Logs.debug("value is ",value)
+        if value == 'True':
+            value = True
+        elif value == 'False':
+            value = False
+        else:
+            value = choice_cell.option['type'](value)
+        Logs.debug("value is ",value)
+        Logs.debug("choice option ['value'] is ",choice_cell.option['type'])
         self.__settings.set_option(choice_cell.option,value)
         self.update_display_value(choice_cell)
         self.redraw_changed_options(choice_cell.category_name)

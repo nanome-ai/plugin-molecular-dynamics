@@ -439,6 +439,7 @@ class AdvancedSettings:
         """
         var_name = option['value'].replace('_values', '')
         setattr(self, var_name, value)
+        Logs.debug("check var_name and value: ",var_name, " ", value)
         Logs.debug("set option ",self.get_option(option))
 
     def set_to_default(self, options, option):
