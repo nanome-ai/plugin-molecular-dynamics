@@ -6124,3 +6124,233 @@ values 1:  ['Langevin', 'Verlet', 'Brownian', 'VariableLangevin', 'VariableVerle
 value 3:  VariableLangevin
 set option  (None, 'VariableLangevin')
 Session 80 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 350 
+=======================================
+
+Registered new session: 81
+Plugin constructed for session 81
+Starting plugin
+-0.choice_cell is  <nanome.api.ui.layout_node.LayoutNode object at 0x00000121789DA108>
+value is  amber10
+value is  amber10
+choice option ['value'] is  <class 'str'>
+-0.choice_cell is  <nanome.api.ui.layout_node.LayoutNode object at 0x00000121789DA108>
+value is  amber03
+value is  amber03
+choice option ['value'] is  <class 'str'>
+-0.choice_cell is  <nanome.api.ui.layout_node.LayoutNode object at 0x00000121789DA108>
+value is  amber99sbnmr
+value is  amber99sbnmr
+choice option ['value'] is  <class 'str'>
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 351 
+=======================================
+
+Registered new session: 81
+Plugin constructed for session 81
+Starting plugin
+cat name is  General
+cat name is  General
+cat name is  General
+cat name is  General
+cat name is  General
+cat name is  General
+cat name is  System
+cat name is  System
+cat name is  System
+cat name is  System
+cat name is  System
+cat name is  System
+cat name is  System
+cat name is  System
+cat name is  Integrator
+cat name is  Integrator
+cat name is  Integrator
+cat name is  Integrator
+cat name is  Integrator
+cat name is  Integrator
+cat name is  Integrator
+cat name is  Integrator
+cat name is  Integrator
+cat name is  Simulation
+cat name is  Simulation
+cat name is  Simulation
+cat name is  Simulation
+cat name is  Simulation
+cat name is  Simulation
+cat name is  Simulation
+cat name is  Simulation
+cat name is  Simulation
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 352 
+=======================================
+
+Registered new session: 81
+Plugin constructed for session 81
+Starting plugin
+display name is  Forcefield
+display name is  Water Model
+display name is  Platform
+display name is  Precision
+display name is  Device index
+display name is  Platform index
+display name is  Nonbonded method
+display name is  Ewald error tolerance
+display name is  Constraints
+display name is  Constraint error tol.
+display name is  Rigid water
+display name is  Nonbonded cutoff
+display name is  Random init vels.
+display name is  Generation temp.
+display name is  Integrator
+display name is  Timestep
+display name is  Error tolerance
+display name is  Collision rate
+display name is  Temperature
+display name is  Barostat
+display name is  Pressure
+display name is  Barostat Interval
+display name is  Thermostat
+display name is  Report Interval
+display name is  Reporter options
+display name is  Positions
+display name is  Velocities
+display name is  Forces
+display name is  Energies
+display name is  Equilibration steps
+display name is  Minimize?
+display name is  Max minimize steps
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 353 
+=======================================
+
+Registered new session: 81
+Plugin constructed for session 81
+Starting plugin
+display name is  Forcefield
+display name is  Water Model
+display name is  Platform
+display name is  Precision
+display name is  Device index
+display name is  Platform index
+display name is  Nonbonded method
+display name is  Ewald error tolerance
+display name is  Constraints
+display name is  Constraint error tol.
+display name is  Rigid water
+display name is  Nonbonded cutoff
+display name is  Random init vels.
+display name is  Generation temp.
+display name is  Integrator
+display name is  Timestep
+display name is  Error tolerance
+display name is  Collision rate
+display name is  Temperature
+display name is  Barostat
+display name is  Pressure
+display name is  Barostat Interval
+display name is  Thermostat
+display name is  Report Interval
+display name is  Reporter options
+display name is  Positions
+display name is  Velocities
+display name is  Forces
+display name is  Energies
+display name is  Equilibration steps
+display name is  Minimize?
+display name is  Max minimize steps
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 354 
+=======================================
+
+Registered new session: 81
+Plugin constructed for session 81
+Starting plugin
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 355 
+=======================================
+
+Registered new session: 81
+Plugin constructed for session 81
+Starting plugin
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 356 
+=======================================
+
+Registered new session: 81
+Plugin constructed for session 81
+Starting plugin
+set option  (None, 'amber14-all')
+set option  (None, 'amber10')
+set option  (None, 'amber03')
+set option  (None, 'amber99sbnmr')
+set option  (None, 'amber99sbildn')
+set option  (None, 'amber99sb')
+set option  (None, 'amber96')
+set option  (None, 'spce')
+set option  (None, 'tip3pfb')
+set option  (None, 'tip3p')
+set option  (None, 'tip4pew')
+set option  (None, 'tip5p')
+set option  (None, 'tip4pfb')
+set option  (None, 'tip5p')
+set option  (None, 'amber10_obc')
+set option  (None, 'Reference')
+set option  (None, 'OpenCL')
+set option  (None, 'CPU')
+set option  (None, 'CUDA')
+set option  ('CudaPrecision', 'single')
+set option  ('CudaPrecision', 'mixed')
+set option  ('CudaPrecision', 'double')
+set option  ('nonbondedMethod', 'NoCutoff')
+set option  ('nonbondedMethod', 'CutoffNonPeriodic')
+set option  ('nonbondedMethod', 'CutoffPeriodic')
+set option  ('constraints', 'None')
+set option  ('constraints', 'HBonds')
+set option  ('constraints', 'AllBonds')
+set option  ('nonbondedMethod', 'NoCutoff')
+set option  ('constraints', 'None')
+set option  ('constraints', 'HBonds')
+set option  ('constraints', 'AllBonds')
+set option  ('nonbondedMethod', 'CutoffNonPeriodic')
+set option  ('constraints', 'None')
+set option  ('constraints', 'HBonds')
+set option  ('constraints', 'AllBonds')
+set option  ('rigidWater', False)
+set option  ('rigidWater', False)
+set option  ('rigidWater', True)
+set option  (None, False)
+set option  (None, True)
+set option  ('nonbondedMethod', 'NoCutoff')
+set option  (None, True)
+set option  ('nonbondedMethod', 'CutoffPeriodic')
+set option  (None, True)
+set option  (None, 'Langevin')
+set option  (None, 'Verlet')
+set option  (None, 'Brownian')
+set option  (None, 'VariableLangevin')
+set option  (None, 'VariableVerlet')
+set option  (None, None)
+set option  (None, None)
+set option  (None, 'Andersen')
+set option  (None, 'None')
+set option  (None, 'Andersen')
+set option  (None, 'None')
+set option  (None, 'Andersen')
+set option  (None, {'Positions': True, 'Velocities': True, 'Forces': False, 'Energies': False})
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+set option  (None, {'Positions': True, 'Velocities': True, 'Forces': True, 'Energies': False})
+set option  (None, {'Positions': True, 'Velocities': True, 'Forces': True, 'Energies': True})
+set option  (None, {'Positions': True, 'Velocities': True, 'Forces': True, 'Energies': False})
+set option  (None, {'Positions': True, 'Velocities': True, 'Forces': False, 'Energies': False})
+set option  (None, {'Positions': True, 'Velocities': False, 'Forces': False, 'Energies': False})
+set option  (None, {'Positions': False, 'Velocities': False, 'Forces': False, 'Energies': False})

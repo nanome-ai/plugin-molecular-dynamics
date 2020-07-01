@@ -177,9 +177,9 @@ class MDAdvancedSettingsMenu:
                     dd_item._selected = dd_item._name == str(default)
                     dropdown_list.append(dd_item)
                 choices_dropdown.items = dropdown_list
-                # Logs.debug('1.choice_cell is: ',choice_cell)
                 choices_dropdown.register_item_clicked_callback(partial(self.handle_dropdown_pressed,choice_cell))
-                
+                if display_name and display_name == 'Forcefield':
+                    choices_dropdown._max_displayed_items = 4
 
 
             elif display_type is dict:
@@ -288,31 +288,20 @@ class MDAdvancedSettingsMenu:
         top_cell = choice_cell.parent_cell if choice_cell.parent_cell else choice_cell
         value = top_cell.settings_value
         value = top_cell.option['type'](value) # cast the value
-        # Logs.debug("-a.top_cell is ",top_cell)
-        # Logs.debug("-0.choice_cell is ",choice_cell)
-        # Logs.debug("-1.choice_cell.option is ",choice_cell.option)
-        # Logs.debug("-2.value is ",value)
+       
         self.__settings.set_option(choice_cell.option, value)
         self.update_display_value(choice_cell)
         self.redraw_changed_options(choice_cell.category_name)
         self.__plugin.update_menu(self.__menu)
 
     def handle_dropdown_pressed(self,choice_cell,dropdown,item):
-        # Logs.debug("-a.top_cell is ",top_cell)
-        Logs.debug("-0.choice_cell is ",choice_cell)
-        # Logs.debug("-1.dropdown is ",dropdown)
-        # Logs.debug("-2.item is ",item)
-        # Logs.debug("item name is: ",item._name)
+        
         value = item._name
-        Logs.debug("value is ",value)
-        if value == 'True':
-            value = True
-        elif value == 'False':
+        # bool("False") = True
+        if value == 'False':
             value = False
         else:
             value = choice_cell.option['type'](value)
-        Logs.debug("value is ",value)
-        Logs.debug("choice option ['value'] is ",choice_cell.option['type'])
         self.__settings.set_option(choice_cell.option,value)
         self.update_display_value(choice_cell)
         self.redraw_changed_options(choice_cell.category_name)
