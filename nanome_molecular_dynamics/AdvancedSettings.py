@@ -379,9 +379,11 @@ class AdvancedSettings:
         values = getattr(AdvancedSettings, option['value'], None) or option['default']
         name = None
         value = None
-
+        Logs.debug("values: ",values)
+        Logs.debug("values 1: ",getattr(AdvancedSettings, option['value'], None))
         dependency_name = option['depends']
         value = getattr(self, option['value'].replace('_values', ''), None)
+        Logs.debug("value 3: ",value)
         if dependency_name is None:
             # simply lookup the name and value
             name = names
@@ -396,10 +398,14 @@ class AdvancedSettings:
             # if values is None at the dependency index, assign value to None
             value = None if values[int(bool_index)] is None else value
         else:
+            Logs.debug("here")
             # lookup the name and value by dependency
             dep_index = self.get_dependency_index(option, dependency_name)
+            Logs.debug("dep_index is ",dep_index)
             name = names[dep_index] if names else None
+            Logs.debug("type(values[dep_index]) is ",type(values[dep_index]))
             if type(values[dep_index]) not in [type, list]:
+                Logs.debug("here2")
                 value = values[dep_index]
 
         if unit and value is not None:
@@ -440,6 +446,7 @@ class AdvancedSettings:
         var_name = option['value'].replace('_values', '')
         setattr(self, var_name, value)
         Logs.debug("check var_name and value: ",var_name, " ", value)
+        Logs.debug("option is ",option)
         Logs.debug("set option ",self.get_option(option))
 
     def set_to_default(self, options, option):
