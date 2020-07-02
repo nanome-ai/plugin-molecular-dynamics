@@ -184,36 +184,36 @@ class MDSimulationProcess():
         for index, residue in enumerate(residues):
             template = templates[index]
             print("unmatched residue:", residue)
-        for index, template in enumerate(templates):
-            residue = residues[index]
-            residue_bonds = list(residue.internal_bonds())+list(residue.external_bonds())
-            print("residue bonds:", residue_bonds)
-            (unique_res_bonds, unique_tmp_bonds) = ForceField.findMissingBonds(residue, template)
-            print("UNIQUE RESIDUE BONDS:", unique_res_bonds)
-            print("UNIQUE TEMPLATE BONDS:", unique_tmp_bonds)
-            print(f"RESIDUE {residue.name}:")
-            if len(unique_res_bonds) > 0:
-                print("Missing bonds:")
-                for res_bond in unique_res_bonds:
-                    print(f"\n{res_bond}")
-            print(f"TEMPLATE {template.name}:")
-            if len(unique_tmp_bonds) > 0:
-                print("Missing bonds:")
-                for tmp_bond in unique_tmp_bonds:
-                    print(f"\n{tmp_bond}")
-            print("-------------------------")
-            for bond in unique_res_bonds:
-                template.name += '[' + ForceField.getAtomID(bond[0]) + '<-->' + ForceField.getAtomID(bond[1]) + ']'
-                if bond[0] in residue.atoms() and bond[1] in residue.atoms():
-                    template.addBondByName(bond[0].name, bond[1].name)
-                else:
-                    template.addExternalBondByName(bond[0].name)
+        # for index, template in enumerate(templates):
+        #     residue = residues[index]
+        #     residue_bonds = list(residue.internal_bonds())+list(residue.external_bonds())
+        #     print("residue bonds:", residue_bonds)
+        #     (unique_res_bonds, unique_tmp_bonds) = ForceField.findMissingBonds(residue, template)
+        #     print("UNIQUE RESIDUE BONDS:", unique_res_bonds)
+        #     print("UNIQUE TEMPLATE BONDS:", unique_tmp_bonds)
+        #     print(f"RESIDUE {residue.name}:")
+        #     if len(unique_res_bonds) > 0:
+        #         print("Missing bonds:")
+        #         for res_bond in unique_res_bonds:
+        #             print(f"\n{res_bond}")
+        #     print(f"TEMPLATE {template.name}:")
+        #     if len(unique_tmp_bonds) > 0:
+        #         print("Missing bonds:")
+        #         for tmp_bond in unique_tmp_bonds:
+        #             print(f"\n{tmp_bond}")
+        #     print("-------------------------")
+        #     for bond in unique_res_bonds:
+        #         template.name += '[' + ForceField.getAtomID(bond[0]) + '<-->' + ForceField.getAtomID(bond[1]) + ']'
+        #         if bond[0] in residue.atoms() and bond[1] in residue.atoms():
+        #             template.addBondByName(bond[0].name, bond[1].name)
+        #         else:
+        #             template.addExternalBondByName(bond[0].name)
 
-            if template.name not in self.__forcefield._templates:
-                self.__forcefield.registerResidueTemplate(template)
-                print(f"registering template {template.name}")
-            else:
-                print(f"redundant template {template.name} ********************")
+        #     if template.name not in self.__forcefield._templates:
+        #         self.__forcefield.registerResidueTemplate(template)
+        #         print(f"registering template {template.name}")
+        #     else:
+        #         print(f"redundant template {template.name} ********************")
 
         # system = self.__forcefield.createSystem(topology, nonbondedMethod = NoCutoff, nonbondedCutoff = 1 * nanometer, constraints = HBonds)
         system = settings.get_system(topology)

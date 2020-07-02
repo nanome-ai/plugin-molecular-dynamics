@@ -3,6 +3,7 @@ import os
 from simtk.openmm import app
 import simtk.openmm as mm
 from simtk import unit
+from nanome.util import Logs
 
 class AdvancedSettings:
     # general options
@@ -378,7 +379,6 @@ class AdvancedSettings:
         values = getattr(AdvancedSettings, option['value'], None) or option['default']
         name = None
         value = None
-
         dependency_name = option['depends']
         value = getattr(self, option['value'].replace('_values', ''), None)
         if dependency_name is None:
@@ -438,6 +438,7 @@ class AdvancedSettings:
         """
         var_name = option['value'].replace('_values', '')
         setattr(self, var_name, value)
+        # Logs.debug("set option ",self.get_option(option))
 
     def set_to_default(self, options, option):
         """Sets an option to its default value
