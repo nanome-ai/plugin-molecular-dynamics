@@ -6354,3 +6354,1660 @@ set option  (None, {'Positions': True, 'Velocities': True, 'Forces': True, 'Ener
 set option  (None, {'Positions': True, 'Velocities': True, 'Forces': False, 'Energies': False})
 set option  (None, {'Positions': True, 'Velocities': False, 'Forces': False, 'Energies': False})
 set option  (None, {'Positions': False, 'Velocities': False, 'Forces': False, 'Energies': False})
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 362 
+=======================================
+
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 506, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 231, in init_simulation
+    self.__simulation = settings.get_simulation(positions)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 506, in get_simulation
+    self.simulation = app.Simulation(self.topology, self.get_system(), self.get_integrator(), self.get_platform(), self.get_platform_properties())
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 105, in __init__
+    self.context = mm.Context(self.system, self.integrator, platform, platformProperties)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 6270, in __init__
+    this = _openmm.new_Context(*args)
+Exception: Cannot create a Context for a System with no particles
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 363 
+=======================================
+
+Registered new session: 84
+Plugin constructed for session 84
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.4714369999999999
+Second Request: 2.0386750000000005
+Stream creation: 2.2768907
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Create topology
+Simulation: 0.14487399999999973
+Simulation: 0.16314690000000098
+Simulation: 0.15751889999999946
+Simulation: 0.1582813999999999
+Simulation: 0.16378429999999966
+Simulation: 0.14702720000000014
+Simulation: 5.3766699
+Simulation: 0.33413659999999723
+Simulation: 0.3498449000000008
+Simulation: 0.32399799999999956
+Simulation: 0.3303963000000003
+Simulation: 0.3202770999999984
+Simulation: 0.3266644000000021
+Simulation: 0.3272958000000017
+Simulation: 0.3208870000000026
+Simulation: 0.32602370000000036
+Simulation: 0.3254047
+Simulation: 0.32981610000000217
+Simulation: 0.3188960999999999
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 266, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Stop Simulation
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Registered new session: 84
+Plugin constructed for session 84
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.3311954999999998
+Second Request: 1.9000439
+Stream creation: 2.121126799999999
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Simulation: 0.14244090000000043
+Simulation: 0.16575950000000006
+Simulation: 0.15844129999999979
+Simulation: 0.1651289000000009
+Simulation: 0.1569641000000015
+Simulation: 0.14951720000000002
+Simulation: 2.3955412999999997
+Simulation: 0.32685419999999965
+Simulation: 0.32776239999999923
+Simulation: 0.32674629999999993
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 266, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Stop Simulation
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 364 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 365 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 366 
+=======================================
+
+Registered new session: 85
+Plugin constructed for session 85
+Starting plugin
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 68, in _run
+    self.start()
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 27, in start
+    self.__process = MDSimulationProcess(self)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 36, in __init__
+    with open('elementData.csv', newline='') as elements_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'elementData.csv'
+
+Stop Simulation
+Error: Plugin encountered an error
+Warning: Received a command from an unregistered session 85
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 367 
+=======================================
+
+Registered new session: 85
+Plugin constructed for session 85
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.4547452000000005
+Second Request: 2.0798781
+Stream creation: 2.2750393000000004
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 132, in init_simulation
+    self.settings.reset()
+AttributeError: 'MDSimulationProcess' object has no attribute 'settings'
+
+Stop Simulation
+Session 85 disconnected
+Registered new session: 85
+Plugin constructed for session 85
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.1612705000000005
+Second Request: 1.6800257999999992
+Stream creation: 1.8592999
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 132, in init_simulation
+    self.settings.reset()
+AttributeError: 'MDSimulationProcess' object has no attribute 'settings'
+
+Stop Simulation
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 368 
+=======================================
+
+Registered new session: 85
+Plugin constructed for session 85
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.4416588
+Second Request: 2.0378433000000005
+Stream creation: 2.2640637000000003
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 133, in init_simulation
+    self.__settings.reset()
+AttributeError: 'MDSimulationProcess' object has no attribute '_MDSimulationProcess__settings'
+
+Stop Simulation
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 369 
+=======================================
+
+Registered new session: 85
+Plugin constructed for session 85
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.4567143999999992
+Second Request: 1.9770100999999975
+Stream creation: 2.2459180999999973
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Create topology
+Create topology
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 193, in init_simulation
+    topology = settings.getTopology(complex_list)
+AttributeError: 'AdvancedSettings' object has no attribute 'getTopology'
+
+Stop Simulation
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 370 
+=======================================
+
+Registered new session: 85
+Plugin constructed for session 85
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 0.603332
+Second Request: 0.8822837999999997
+Stream creation: 1.1617819000000003
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 132, in init_simulation
+    self.settings.reset()
+AttributeError: 'MDSimulationProcess' object has no attribute 'settings'
+
+Stop Simulation
+Start Simulation
+First Request: 2.3247522
+Second Request: 3.0985839000000004
+Stream creation: 3.393390300000001
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 132, in init_simulation
+    self.settings.reset()
+AttributeError: 'MDSimulationProcess' object has no attribute 'settings'
+
+Stop Simulation
+Session 85 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 371 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.3928711000000007
+Second Request: 1.9126231000000011
+Stream creation: 2.1684520999999997
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Simulation: 0.1687850999999938
+Simulation: 0.17165190000000052
+Simulation: 0.1790723000000014
+Simulation: 0.17571829999999977
+Simulation: 0.14338210000000373
+Simulation: 0.17497689999999722
+Simulation: 4.164166100000003
+Simulation: 0.3788921000000016
+Simulation: 0.36073840000000246
+Simulation: 0.3550394999999966
+Simulation: 0.3849228999999994
+Simulation: 0.35453110000000265
+Simulation: 0.3472927000000041
+Simulation: 0.3545661999999936
+Simulation: 0.35995249999999857
+Simulation: 0.35917510000000163
+Simulation: 0.34755650000000315
+Simulation: 0.33126620000000173
+Simulation: 0.3620003000000054
+Simulation: 0.36677249999999617
+Simulation: 0.38217859999999604
+Simulation: 0.37679930000000184
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 272, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Stop Simulation
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.0070329000000005
+Second Request: 1.3749032999999997
+Stream creation: 1.5966766999999997
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Stop Simulation
+Start Simulation
+First Request: 0.9858193000000028
+Second Request: 1.3584718000000002
+Stream creation: 1.5908206000000007
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Stop Simulation
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 372 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.0238114000000014
+Second Request: 1.3783602000000013
+Stream creation: 1.5960470999999998
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 373 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.0068508000000005
+Second Request: 1.3863626999999994
+Stream creation: 1.5961082999999991
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 374 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.067818
+Second Request: 1.4118516999999997
+Stream creation: 1.6268269999999996
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1169, in createSystem
+    raise Exception('The residue handler %s indicated it had correctly parameterized residue %s, but the generated template did not match the residue signature.' % (generator.__class__.__name__, str(res)))
+Exception: The residue handler function indicated it had correctly parameterized residue <Residue 0 (GLY) of chain 0>, but the generated template did not match the residue signature.
+
+Create topology
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1169, in createSystem
+    raise Exception('The residue handler %s indicated it had correctly parameterized residue %s, but the generated template did not match the residue signature.' % (generator.__class__.__name__, str(res)))
+Exception: The residue handler function indicated it had correctly parameterized residue <Residue 0 (GLY) of chain 0>, but the generated template did not match the residue signature.
+
+Create topology
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 225, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1169, in createSystem
+    raise Exception('The residue handler %s indicated it had correctly parameterized residue %s, but the generated template did not match the residue signature.' % (generator.__class__.__name__, str(res)))
+Exception: The residue handler function indicated it had correctly parameterized residue <Residue 0 (GLY) of chain 0>, but the generated template did not match the residue signature.
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 375 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 376 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 377 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 378 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 0.9901829000000006
+Second Request: 1.3742847999999999
+Stream creation: 1.6257779
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 379 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 0.9600627999999993
+Second Request: 1.3127841
+Stream creation: 1.4556268
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 1 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 2 times, aborting simulation:
+Stop Simulation
+Warning: Received an unknown callback id: 11
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 381 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 0.9604636000000006
+Second Request: 1.3177579000000001
+Stream creation: 1.5344341000000004
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 1 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 2 times, aborting simulation:
+Stop Simulation
+Warning: Received an unknown callback id: 11
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 382 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 383 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.0542961000000002
+Second Request: 1.4214231000000002
+Stream creation: 1.6119177000000002
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1169, in createSystem
+    raise Exception('The residue handler %s indicated it had correctly parameterized residue %s, but the generated template did not match the residue signature.' % (generator.__class__.__name__, str(res)))
+Exception: The residue handler function indicated it had correctly parameterized residue <Residue 0 (GLY) of chain 0>, but the generated template did not match the residue signature.
+
+Create topology
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1169, in createSystem
+    raise Exception('The residue handler %s indicated it had correctly parameterized residue %s, but the generated template did not match the residue signature.' % (generator.__class__.__name__, str(res)))
+Exception: The residue handler function indicated it had correctly parameterized residue <Residue 0 (GLY) of chain 0>, but the generated template did not match the residue signature.
+
+Create topology
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1169, in createSystem
+    raise Exception('The residue handler %s indicated it had correctly parameterized residue %s, but the generated template did not match the residue signature.' % (generator.__class__.__name__, str(res)))
+Exception: The residue handler function indicated it had correctly parameterized residue <Residue 0 (GLY) of chain 0>, but the generated template did not match the residue signature.
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 384 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 0.9606339000000004
+Second Request: 1.2859368
+Stream creation: 1.4716018000000002
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 226, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 385 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 1.0065659
+Second Request: 1.3609475
+Stream creation: 1.5655358999999995
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 386 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+First Request: 0.9926461
+Second Request: 1.3359353999999994
+Stream creation: 1.5510643999999996
+Create topology
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms is similar to GLY, but it is missing 3 hydrogen atoms.
+
+Start Simulation
+First Request: 1.4726174000000185
+Second Request: 2.0041572000000087
+Stream creation: 2.247363000000007
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms matches NGLY, but the bonds are different.  Perhaps the chain is missing a terminal group?
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms matches NGLY, but the bonds are different.  Perhaps the chain is missing a terminal group?
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms matches NGLY, but the bonds are different.  Perhaps the chain is missing a terminal group?
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 387 
+=======================================
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 388 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+Warning: Function molecular is deprecated. 
+Warning: Function rendering is deprecated. 
+Error: Couldn't execute process obabel Please check if executable is present and has permissions:
+ Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_process\_process_manager.py", line 74, in __start_process
+    entry.process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=1, cwd=request.cwd_path, universal_newlines=has_text, close_fds=POSIX)
+  File "E:\anaconda3\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "E:\anaconda3\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+Error: Couldn't execute openbabel to generate bonds. Is it installed?
+First Request: 17.090738800000004
+Second Request: 17.5679709
+Stream creation: 17.8499203
+Create topology
+Warning: Function molecular is deprecated. 
+Simulation: 0.2434925000000021
+Simulation: 0.2688857999999996
+Simulation: 0.28088160000000073
+Simulation: 0.2601834000000025
+Simulation: 0.25993449999999996
+Simulation: 0.2576455000000024
+Simulation: 5.6845704999999995
+Simulation: 0.5625041999999993
+Simulation: 0.539893400000004
+Simulation: 0.5428789999999992
+Simulation: 0.5565512999999953
+Simulation: 0.5762972000000062
+Simulation: 0.554009200000003
+Simulation: 0.5665921000000012
+Simulation: 0.602355799999998
+Simulation: 0.6083409000000017
+Simulation: 0.5742983999999964
+Simulation: 0.5498800000000017
+Simulation: 0.5345790000000008
+Simulation: 0.5444546000000017
+Simulation: 0.5494502000000026
+Simulation: 0.5554356000000027
+Simulation: 0.5567397000000014
+Simulation: 0.5425515999999959
+Simulation: 0.5455739000000008
+Simulation: 0.5742216000000013
+Simulation: 0.5537999999999954
+Simulation: 0.5247487999999976
+Simulation: 0.5550178000000017
+Simulation: 0.5663985000000054
+Simulation: 0.5712495000000004
+Simulation: 0.5729438000000044
+Simulation: 0.5719409999999954
+Simulation: 0.5338898999999913
+Simulation: 0.5516671999999971
+Simulation: 0.5398761999999948
+Simulation: 0.5354198999999937
+Simulation: 0.5400748999999934
+Simulation: 0.5469688000000019
+Simulation: 0.5436990999999978
+Simulation: 0.5367621000000042
+Simulation: 0.5497457000000026
+Simulation: 0.5366464000000093
+Simulation: 0.5480955999999964
+Simulation: 0.5677261000000016
+Simulation: 0.5489900000000034
+Simulation: 0.537599599999993
+Simulation: 0.5369349000000057
+Simulation: 0.5454184999999967
+Simulation: 0.5373651000000024
+Simulation: 0.556582800000001
+Simulation: 0.5656606999999951
+Simulation: 0.5460382000000124
+Simulation: 0.5665769000000012
+Simulation: 0.5465309999999874
+Simulation: 0.5389593000000019
+Simulation: 0.5427622999999926
+Simulation: 0.5394244999999955
+Simulation: 0.5478051999999991
+Simulation: 0.5555820000000011
+Simulation: 0.5652541000000042
+Simulation: 0.581448199999997
+Simulation: 0.5747346999999934
+Simulation: 0.5960643999999888
+Simulation: 0.5647197999999918
+Simulation: 0.5982762000000008
+Simulation: 0.5808734000000015
+Simulation: 0.571655100000001
+Simulation: 0.5179837999999961
+Simulation: 0.5246018999999933
+Simulation: 0.5568626999999964
+Simulation: 0.568475399999997
+Simulation: 0.5387380000000093
+Simulation: 0.6113964999999979
+Simulation: 0.629141599999997
+Simulation: 0.5458453999999904
+Simulation: 0.569775799999988
+Simulation: 0.5767783000000009
+Simulation: 0.563381899999996
+Simulation: 0.5530397999999934
+Simulation: 0.5742393000000021
+Simulation: 0.5794001000000009
+Simulation: 0.5585067000000095
+Simulation: 0.5579561999999925
+Simulation: 0.5728470000000101
+Simulation: 0.5738869000000051
+Simulation: 0.559207200000003
+Simulation: 0.5737545000000068
+Simulation: 0.5397825999999952
+Simulation: 0.5737572999999969
+Simulation: 0.5986099999999936
+Simulation: 0.5806842000000074
+Simulation: 0.5669252
+Simulation: 0.5390739000000053
+Simulation: 0.5571653999999882
+Simulation: 0.5688367999999997
+Simulation: 0.5801120999999938
+Simulation: 0.5707810999999907
+Simulation: 0.5759856000000099
+Simulation: 0.5844756000000046
+Simulation: 0.5875923000000114
+Simulation: 0.5785005000000041
+Simulation: 0.5621001999999891
+Simulation: 0.5329429999999888
+Simulation: 0.5651423999999992
+Simulation: 0.5465137999999996
+Simulation: 0.5532319999999942
+Simulation: 0.53560259999999
+Simulation: 0.5481795000000034
+Simulation: 0.5444469000000112
+Simulation: 0.5298647999999986
+Simulation: 0.5470043999999916
+Simulation: 0.5443645999999944
+Simulation: 0.5424460999999923
+Simulation: 0.544458700000007
+Simulation: 0.5412494999999922
+Simulation: 0.5346949999999993
+Simulation: 0.5484136000000035
+Exiting
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 868, in wait
+    ready_handles = _exhaustive_wait(waithandle_to_obj.keys(), timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 800, in _exhaustive_wait
+    res = _winapi.WaitForMultipleObjects(L, False, timeout)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin.py", line 266, in __on_termination_signal
+    self.__exit()
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin.py", line 275, in __exit
+    sys.exit(0)
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 14, in _read_from_plugin
+    has_net_data = self.__net_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 330, in _poll
+    return bool(wait([self], timeout))
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 872, in wait
+    ov.cancel()
+OSError: [WinError 6] The handle is invalid
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 389 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Session 86 disconnected
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 390 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+Warning: Function molecular is deprecated. 
+Warning: Function rendering is deprecated. 
+Error: Couldn't execute process obabel Please check if executable is present and has permissions:
+ Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_process\_process_manager.py", line 74, in __start_process
+    entry.process = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=1, cwd=request.cwd_path, universal_newlines=has_text, close_fds=POSIX)
+  File "E:\anaconda3\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "E:\anaconda3\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+Error: Couldn't execute openbabel to generate bonds. Is it installed?
+First Request: 6.5065443
+Second Request: 6.7690871
+Stream creation: 6.9718479
+Create topology
+Warning: Function molecular is deprecated. 
+Simulation: 0.15511479999999978
+Simulation: 0.1612072999999974
+Simulation: 0.1673686000000032
+Simulation: 0.17412179999999822
+Simulation: 0.16956379999999882
+Simulation: 0.15625070000000107
+Simulation: 2.5621326000000018
+Simulation: 0.3249795000000013
+Simulation: 0.3251946999999973
+Simulation: 0.32157330000000073
+Simulation: 0.32600419999999986
+Simulation: 0.330946400000002
+Simulation: 0.362387499999997
+Simulation: 0.34385039999999734
+Simulation: 0.33104720000000043
+Simulation: 0.35540200000000155
+Simulation: 0.34975410000000196
+Simulation: 0.32850469999999987
+Simulation: 0.35699280000000044
+Simulation: 0.3519839999999981
+Simulation: 0.3222711999999994
+Simulation: 0.3305889999999998
+Simulation: 0.357316400000002
+Simulation: 0.3612284999999993
+Simulation: 0.3497362000000024
+Simulation: 0.3517647000000004
+Simulation: 0.3310738999999998
+Simulation: 0.3564810999999999
+Simulation: 0.35008690000000087
+Simulation: 0.3608702000000008
+Simulation: 0.35025630000000163
+Simulation: 0.3558813999999977
+Simulation: 0.3318835
+Simulation: 0.3491004000000011
+Simulation: 0.35427299999999917
+Simulation: 0.3508636000000003
+Simulation: 0.36132820000000265
+Simulation: 0.3256016000000024
+Simulation: 0.3289289999999987
+Simulation: 0.34636199999999917
+Simulation: 0.3295691999999981
+Simulation: 0.346187699999998
+Simulation: 0.3657830000000004
+Simulation: 0.32643539999999405
+Simulation: 0.32233450000000374
+Simulation: 0.34894179999999864
+Simulation: 0.37898890000000307
+Simulation: 0.3484261999999987
+Simulation: 0.3590784999999954
+Simulation: 0.36754639999999483
+Simulation: 0.3812435000000036
+Simulation: 0.3822568000000004
+Simulation: 0.35906669999999963
+Simulation: 0.34420800000000185
+Simulation: 0.3475607000000025
+Simulation: 0.33481730000000454
+Simulation: 0.35083619999999627
+Simulation: 0.32863570000000664
+Simulation: 0.36874139999999755
+Simulation: 0.3674712999999983
+Simulation: 0.3343970000000027
+Simulation: 0.34498169999999817
+Simulation: 0.3272551999999962
+Simulation: 0.32421970000000044
+Simulation: 0.32041270000000566
+Simulation: 0.3390397000000007
+Simulation: 0.35708069999999736
+Simulation: 0.3552289000000002
+Simulation: 0.3473050999999998
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 273, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Stop Simulation
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 391 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+Warning: Function molecular is deprecated. 
+Warning: Function rendering is deprecated. 
+First Request: 3.6739783999999993
+Second Request: 4.0343593
+Stream creation: 4.247993900000001
+Create topology
+Warning: Function molecular is deprecated. 
+Simulation: 0.24738050000000023
+Simulation: 0.3158512000000009
+Simulation: 0.2617990999999993
+Simulation: 0.29283079999999906
+Simulation: 0.26688120000000026
+Simulation: 0.25544559999999983
+Simulation: 5.784149799999998
+Simulation: 0.5539643999999981
+Simulation: 0.5723117000000002
+Simulation: 0.5626567000000016
+Simulation: 0.5336866000000029
+Simulation: 0.5116085000000012
+Simulation: 0.5367242999999995
+Simulation: 0.5139192999999977
+Simulation: 0.5151877999999996
+Simulation: 0.5396846000000011
+Simulation: 0.5103463000000019
+Simulation: 0.5168023999999996
+Simulation: 0.530554900000002
+Simulation: 0.5156305000000003
+Simulation: 0.5255694999999996
+Simulation: 0.5202613000000014
+Simulation: 0.5166830000000004
+Simulation: 0.5110674000000017
+Simulation: 0.508389600000001
+Simulation: 0.5102984999999975
+Simulation: 0.5138000999999974
+Simulation: 0.506672199999997
+Simulation: 0.5114555999999979
+Simulation: 0.5122034999999983
+Simulation: 0.5067807000000002
+Simulation: 0.5317285999999939
+Simulation: 0.5324552000000011
+Simulation: 0.5498380000000012
+Simulation: 0.531664499999998
+Simulation: 0.5353834000000006
+Simulation: 0.5723178000000004
+Simulation: 0.5538005999999953
+Simulation: 0.5448159000000032
+Simulation: 0.547460000000001
+Simulation: 0.5353020000000015
+Simulation: 0.5597769000000028
+Simulation: 0.5552458000000016
+Simulation: 0.5347939000000039
+Simulation: 0.5099076999999994
+Simulation: 0.5237388000000038
+Simulation: 0.535664600000004
+Simulation: 0.5695037999999997
+Simulation: 0.5462889999999945
+Simulation: 0.5427350000000004
+Simulation: 0.5547964000000007
+Simulation: 0.5240567999999968
+Simulation: 0.5097742000000025
+Simulation: 0.506814300000002
+Simulation: 0.5245651999999978
+Simulation: 0.5473488000000017
+Simulation: 0.5276223999999985
+Simulation: 0.5280040999999969
+Simulation: 0.5528771000000035
+Simulation: 0.5139374000000032
+Simulation: 0.5057220999999998
+Simulation: 0.5149430999999964
+Simulation: 0.5149814999999975
+Simulation: 0.5085550000000012
+Simulation: 0.5570007999999973
+Simulation: 0.537582399999998
+Simulation: 0.5311481000000029
+Simulation: 0.521242700000002
+Simulation: 0.5384300000000053
+Simulation: 0.5413269000000014
+Simulation: 0.5371871999999982
+Simulation: 0.5098844999999983
+Simulation: 0.5107282999999967
+Simulation: 0.5450628999999978
+Simulation: 0.5529389000000009
+Simulation: 0.5282039000000012
+Simulation: 0.5053692999999981
+Simulation: 0.5140224000000018
+Simulation: 0.506364700000006
+Simulation: 0.506558499999997
+Simulation: 0.5264723000000018
+Simulation: 0.5313546000000002
+Simulation: 0.5180111000000025
+Simulation: 0.5648102999999978
+Simulation: 0.5516961000000009
+Simulation: 0.5374457000000064
+Simulation: 0.525821399999991
+Simulation: 0.49545540000001154
+Simulation: 0.5010732000000075
+Simulation: 0.5116991000000013
+Simulation: 0.5180538999999982
+Simulation: 0.5111489000000091
+Simulation: 0.511269299999995
+Simulation: 0.5053623000000016
+Simulation: 0.5149556000000075
+Simulation: 0.5077409000000017
+Simulation: 0.5076669000000038
+Simulation: 0.512447999999992
+Simulation: 0.5313389999999885
+Simulation: 0.5344129999999865
+Simulation: 0.5339685999999944
+Simulation: 0.5264663999999897
+Simulation: 0.5234961999999967
+Simulation: 0.5061318999999997
+Simulation: 0.5175241000000028
+Simulation: 0.5105990999999932
+Simulation: 0.5067278999999871
+Simulation: 0.5160119000000094
+Simulation: 0.5089210000000008
+Simulation: 0.5081785999999937
+Simulation: 0.5217302000000075
+Simulation: 0.5393767999999994
+Simulation: 0.5333731999999998
+Simulation: 0.5198501999999934
+Simulation: 0.5383151999999995
+Simulation: 0.5078663000000034
+Simulation: 0.5153525999999999
+Simulation: 0.5381887000000063
+Simulation: 0.5213516000000027
+Simulation: 0.528234299999994
+Simulation: 0.5331410999999946
+Simulation: 0.5222882000000055
+Simulation: 0.5237082000000015
+Simulation: 0.5311902999999916
+Simulation: 0.5235695999999876
+Simulation: 0.5318603999999993
+Simulation: 0.5164476000000064
+Simulation: 0.5306862000000052
+Simulation: 0.5163232000000022
+Simulation: 0.5164400000000029
+Simulation: 0.5388332999999932
+Simulation: 0.532964800000002
+Simulation: 0.5167440000000028
+Simulation: 0.5141875000000056
+Simulation: 0.5090730000000008
+Simulation: 0.5104645000000119
+Simulation: 0.5158090999999985
+Simulation: 0.5307652000000047
+Simulation: 0.5186542000000003
+Simulation: 0.5171488000000011
+Simulation: 0.5693097999999992
+Simulation: 0.5923448000000064
+Simulation: 0.546010300000006
+Simulation: 0.5234588999999943
+Simulation: 0.5369053999999949
+Simulation: 0.5329704000000106
+Simulation: 0.509973500000001
+Simulation: 0.5182341999999949
+Simulation: 0.5060385000000025
+Simulation: 0.5107131999999979
+Simulation: 0.4979826000000003
+Simulation: 0.49461089999999786
+Simulation: 0.5101066000000003
+Simulation: 0.5142296000000073
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 70, in _run
+    while self._network._receive() and self._process_manager.update():
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 86, in _receive
+    callback(self, received_object, request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_commands\_callbacks\_simple_callback.py", line 8, in _simple_callback_no_arg
+    network._call(request_id)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_process_network.py", line 29, in _call
+    self._plugin._call(request_id, *args)
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_plugin_instance.py", line 31, in _call
+    callbacks[id](*args)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 273, in on_result_processed
+    self.__simulation.step(AdvancedSettings.instance.simulation_reporter_interval)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 132, in step
+    self._simulate(endStep=self.currentStep+steps)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\simulation.py", line 197, in _simulate
+    self.integrator.step(10) # Only take 10 steps at a time, to give Python more chances to respond to a control-c.
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\openmm.py", line 15579, in step
+    return _openmm.LangevinIntegrator_step(self, steps)
+Exception: Particle coordinate is nan
+
+Stop Simulation
+Error: Plugin encountered an error, please check the logs. Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_session.py", line 15, in _read_from_plugin
+    has_proc_data = self.__proc_plugin_pipe.poll()
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "E:\anaconda3\lib\multiprocessing\connection.py", line 328, in _poll
+    _winapi.PeekNamedPipe(self._handle)[0] != 0):
+BrokenPipeError: [WinError 109] The pipe has been ended
+
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 392 
+=======================================
+
+Registered new session: 86
+Plugin constructed for session 86
+Starting plugin
+Warning: Function molecular is deprecated. 
+Warning: Function set_all_text is deprecated. Try using text.value.set_all instead. 
+Start Simulation
+Warning: Function molecular is deprecated. 
+Warning: Function rendering is deprecated. 
+First Request: 3.720438699999999
+Second Request: 4.1143184999999995
+Stream creation: 4.3717584999999985
+Create topology
+Warning: Function molecular is deprecated. 
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms matches NGLY, but the bonds are different.  Perhaps the chain is missing a terminal group?
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms matches NGLY, but the bonds are different.  Perhaps the chain is missing a terminal group?
+
+Create topology
+Error: Could not register template for residue <Residue 0 (GLY) of chain 0>
+Error: Got an error 3 times, aborting simulation:
+Stop Simulation
+Error: Traceback (most recent call last):
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulation.py", line 132, in __run_simulation
+    self.__process.init_simulation(complex_list)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\MDSimulationProcess.py", line 227, in init_simulation
+    system = settings.get_system(topology)
+  File "E:\git_repositories\plugin-molecular-dynamics\nanome_molecular_dynamics\AdvancedSettings.py", line 489, in get_system
+    self.system = self.get_forcefield().createSystem(self.topology, **args)
+  File "E:\anaconda3\lib\site-packages\simtk\openmm\app\forcefield.py", line 1174, in createSystem
+    raise ValueError('No template found for residue %d (%s).  %s' % (res.index+1, res.name, _findMatchErrors(self, res)))
+ValueError: No template found for residue 1 (GLY).  The set of atoms matches NGLY, but the bonds are different.  Perhaps the chain is missing a terminal group?
+
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_net_instance.py", line 66, in receive
+    data = self._connection.recv(4096)
+  File "E:\anaconda3\lib\ssl.py", line 1056, in recv
+    return self.read(buflen)
+  File "E:\anaconda3\lib\ssl.py", line 931, in read
+    return self._sslobj.read(len)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 9999 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Connected to server plugins.nanome.ai 9999
+Error: Traceback (most recent call last):
+  File "E:\anaconda3\lib\site-packages\nanome\_internal\_network\_net_instance.py", line 66, in receive
+    data = self._connection.recv(4096)
+  File "E:\anaconda3\lib\ssl.py", line 1056, in recv
+    return self.read(buflen)
+  File "E:\anaconda3\lib\ssl.py", line 931, in read
+    return self._sslobj.read(len)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+Trying to reconnect...
+Error: Cannot connect to plugin server at plugins.nanome.ai 9999 [Errno 11001] getaddrinfo failed
+Trying to reconnect...
+Connected to server plugins.nanome.ai 9999
+Start plugin
+Connected to server plugins.nanome.ai 9999
+Registered with plugin ID 393 
+=======================================
+
