@@ -1,4 +1,4 @@
-# Nanome - Molecular Dynamics
+# Nanome - Molecular Dynamics [WIP - ALPHA Version]
 
 Runs a simple molecular dynamics simulation on a complex of the workspace.
 
