@@ -379,6 +379,7 @@ class AdvancedSettings:
         values = getattr(AdvancedSettings, option['value'], None) or option['default']
         name = None
         value = None
+        
         dependency_name = option['depends']
         value = getattr(self, option['value'].replace('_values', ''), None)
         if dependency_name is None:
@@ -438,7 +439,6 @@ class AdvancedSettings:
         """
         var_name = option['value'].replace('_values', '')
         setattr(self, var_name, value)
-        # Logs.debug("set option ",self.get_option(option))
 
     def set_to_default(self, options, option):
         """Sets an option to its default value
@@ -510,3 +510,9 @@ class AdvancedSettings:
     def attach_reporter(self, reporter_class, result_callback):
         reporter = reporter_class(self, result_callback)
         self.get_simulation().reporters = [reporter]
+
+    def reset(self):
+        self.topology = None
+        self.positions = []
+        self.forcefield = None
+        self.system = None

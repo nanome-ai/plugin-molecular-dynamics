@@ -82,7 +82,7 @@ class MDSimulation(nanome.PluginInstance):
         self.request_refresh()
 
     def on_complexes_received(self, complex_list):
-        # complex_list = self.__process.fix_complexes(complex_list)
+        complex_list = self.__process.fix_complexes(complex_list)
         # self.add_bonds(complex_list, self.bonds_added)
         self.bonds_added(complex_list)
 
@@ -136,8 +136,9 @@ class MDSimulation(nanome.PluginInstance):
             except:
                 if attempt >= 3:
                     Logs.error("Got an error", attempt, "times, aborting simulation:")
-                    Logs.error(traceback.format_exc())
+                    # Logs.error(traceback.format_exc())
                     self.stop_simulation()
+                Logs.error(traceback.format_exc())
 
 def main():
     plugin = nanome.Plugin("MD Simulation", "Run molecular dynamics on the selected complexes, using OpenMM", "MD", True)

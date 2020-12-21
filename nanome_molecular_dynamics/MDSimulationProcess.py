@@ -2,11 +2,13 @@ from simtk.openmm.app import *
 from simtk.openmm import *
 from simtk.unit import *
 from simtk.openmm.app.element import *
+from simtk.openmm.app.forcefield import _createResidueTemplate
 from simtk.openmm.app.internal.unitcell import computePeriodicBoxVectors
 from pdbfixer.pdbfixer import PDBFixer, proteinResidues, dnaResidues, rnaResidues, _guessFileFormat
 
 import subprocess
 from timeit import default_timer as timer
+from uuid import uuid1
 
 import nanome
 from nanome.util import Logs
@@ -29,6 +31,16 @@ class MDSimulationProcess():
     def __init__(self, plugin):
         self.__plugin = plugin
         self.__forcefield = None
+        self.__masses = {}
+        with open('elementData.csv', newline='') as elements_file:
+            elements = elements_file.readlines()
+            for element_line in elements:
+                fields = element_line.split(',')
+                self.__masses[fields[2]] = fields[3]
+
+    @staticmethod
+    def get_mass(element):
+        return self.__masses(element)
 
     @staticmethod
     def get_bond_type(kind):
@@ -101,6 +113,8 @@ class MDSimulationProcess():
             fixer.addMissingHydrogens(7.0)
 
             (topology, positions) = self.delete_alternate_atoms(fixer.topology, fixer.positions)
+            topology.createStandardBonds()
+            topology.createDisulfideBonds(positions)
             with open('tmp.pdb', 'w') as pdb_file:
                 PDBFile.writeFile(topology, positions, pdb_file)
 
@@ -116,6 +130,8 @@ class MDSimulationProcess():
 
     def init_simulation(self, complex_list):
         settings = AdvancedSettings.instance
+        #self.settings.reset()
+        settings.reset()
         self.__forcefield = settings.get_forcefield()
         # Create topology
         topology = Topology()
@@ -159,8 +175,7 @@ class MDSimulationProcess():
                             if max_z == None or position.z > max_z:
                                 max_z = position.z
 
-        topology.createStandardBonds()
-        topology.createDisulfideBonds(positions)
+        
         added_bonds = set(topology.bonds())
         for complex in complex_list:
             for molecule in complex.molecules:
@@ -175,46 +190,38 @@ class MDSimulationProcess():
                             topology.addBond(atom1, atom2, type)
                             added_bonds.add(bond.index)
 
-        # topology.setPeriodicBoxVectors(computePeriodicBoxVectors(max_x - min_x, max_y - min_y, max_z - min_z, 90, 90, 90))
+        #topology = settings.getTopology(complex_list)
         topology.setPeriodicBoxVectors(computePeriodicBoxVectors(49.163, 45.981, 38.869, 90.00, 90.00, 90.00))
+       
+        # [templates, residues] = self.__forcefield.generateTemplatesForUnmatchedResidues(topology)
+        # for index, residue in enumerate(residues):
+        #     template = templates[index]
+        #     print("unmatched residue:", residue)
 
-        # Create simulation parameters
-        # nonbondedMethod = PME
-        [templates, residues] = self.__forcefield.generateTemplatesForUnmatchedResidues(topology)
-        for index, residue in enumerate(residues):
-            template = templates[index]
-            print("unmatched residue:", residue)
-        # for index, template in enumerate(templates):
-        #     residue = residues[index]
-        #     residue_bonds = list(residue.internal_bonds())+list(residue.external_bonds())
-        #     print("residue bonds:", residue_bonds)
-        #     (unique_res_bonds, unique_tmp_bonds) = ForceField.findMissingBonds(residue, template)
-        #     print("UNIQUE RESIDUE BONDS:", unique_res_bonds)
-        #     print("UNIQUE TEMPLATE BONDS:", unique_tmp_bonds)
-        #     print(f"RESIDUE {residue.name}:")
-        #     if len(unique_res_bonds) > 0:
-        #         print("Missing bonds:")
-        #         for res_bond in unique_res_bonds:
-        #             print(f"\n{res_bond}")
-        #     print(f"TEMPLATE {template.name}:")
-        #     if len(unique_tmp_bonds) > 0:
-        #         print("Missing bonds:")
-        #         for tmp_bond in unique_tmp_bonds:
-        #             print(f"\n{tmp_bond}")
-        #     print("-------------------------")
-        #     for bond in unique_res_bonds:
-        #         template.name += '[' + ForceField.getAtomID(bond[0]) + '<-->' + ForceField.getAtomID(bond[1]) + ']'
-        #         if bond[0] in residue.atoms() and bond[1] in residue.atoms():
-        #             template.addBondByName(bond[0].name, bond[1].name)
-        #         else:
-        #             template.addExternalBondByName(bond[0].name)
-
-        #     if template.name not in self.__forcefield._templates:
-        #         self.__forcefield.registerResidueTemplate(template)
-        #         print(f"registering template {template.name}")
-        #     else:
-        #         print(f"redundant template {template.name} ********************")
-
+        def genTemplates(forcefield, residue):
+            try:
+                template = _createResidueTemplate(residue)
+                template.name = uuid1()
+                for index, atom in enumerate(template.atoms()):
+                    atom_name = uuid1()
+                    atom_symbol = MDSimulationProcess.get_atom_symbol(atom, index)
+                    atom_mass = MDSimulationProcess.get_mass(atom_symbol)
+                    atomTypeParameters = {
+                        'name': atom_name,
+                        'class': atom_symbol,
+                        'mass': atom_mass,
+                        'element': atom_symbol
+                    }
+                    self.__forcefield.registerAtomType(atomTypeParameters)
+                    atom.type = self.__forcefield.atomTypes[atom_name]
+                self.__forcefield.registerResidueTemplate(template)
+            
+                return True
+            except:
+                Logs.error("Could not register template for residue", residue)
+                return False
+        
+        self.__forcefield.registerTemplateGenerator(genTemplates)
         # system = self.__forcefield.createSystem(topology, nonbondedMethod = NoCutoff, nonbondedCutoff = 1 * nanometer, constraints = HBonds)
         system = settings.get_system(topology)
 
