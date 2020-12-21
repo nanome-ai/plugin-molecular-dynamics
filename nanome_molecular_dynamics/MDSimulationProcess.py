@@ -9,7 +9,6 @@ from pdbfixer.pdbfixer import PDBFixer, proteinResidues, dnaResidues, rnaResidue
 import subprocess
 from timeit import default_timer as timer
 from uuid import uuid1
-import csv
 
 import nanome
 from nanome.util import Logs
